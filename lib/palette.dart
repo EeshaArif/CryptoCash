@@ -10,6 +10,13 @@ class Palette {
   static final faded = Colors.white.withOpacity(0.6);
   static const fadedIcon = Color(0xFF565666);
 
+  static final coinCardStartGradient = Color(0xFFE0DAFF).withOpacity(0.2);
+  static final coinCardEndGradient = Color(0xFF6E6D9A).withOpacity(0.2);
+
+  static const transactionCard = Color(0xFF373154);
+  static const cashIn = Color(0xFF2DF1C2);
+  static const cashOut = Color(0xFFEC5555);
+
   static MaterialColor createSwatch(Color color) {
     final swatchMap = {
       50: color.withOpacity(0.1),

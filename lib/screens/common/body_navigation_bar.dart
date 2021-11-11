@@ -21,6 +21,9 @@ class _BodyNavigationBarState extends State<BodyNavigationBar> {
       currentIndex: currentIndex,
       type: BottomNavigationBarType.fixed,
       onTap: (value) {
+        // If Scan QR code pressed
+        if (value == 2) return;
+
         setState(() {
           currentIndex = value;
         });

@@ -1,4 +1,5 @@
 import 'package:cryptocash/extensions.dart';
+import 'package:cryptocash/palette.dart';
 import 'package:flutter/material.dart';
 
 class BalanceCard extends StatelessWidget {
@@ -34,7 +35,10 @@ class BalanceCard extends StatelessWidget {
               ),
               Text(
                 'vPKR',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context)
+                    .textTheme
+                    .headline6!
+                    .copyWith(color: Palette.faded),
               ).pad(
                 padding: EdgeInsets.only(left: 5),
               ),

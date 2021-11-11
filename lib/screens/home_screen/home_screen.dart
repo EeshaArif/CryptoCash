@@ -4,6 +4,8 @@ import 'package:cryptocash/screens/base_scaffold.dart';
 import 'package:cryptocash/screens/common/body_navigation_bar.dart';
 import 'package:cryptocash/screens/common/body_sheet.dart';
 import 'package:cryptocash/screens/home_screen/widgets/balance_card.dart';
+import 'package:cryptocash/screens/home_screen/widgets/coins.dart';
+import 'package:cryptocash/screens/home_screen/widgets/transactions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -76,7 +78,17 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           BodySheet(
-            height: _size.height * 0.6 + 15,
+            height: _size.height * 0.6 + 17.5,
+            child: Column(
+              children: [
+                Coins().pad(
+                  padding: EdgeInsets.only(
+                    top: 20,
+                  ),
+                ),
+                Transactions()
+              ],
+            ),
           ),
           BodyNavigationBar(),
         ],
