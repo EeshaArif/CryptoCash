@@ -5,8 +5,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class BaseScaffold extends StatelessWidget {
   final Widget? body;
+  final double? heightRatio;
 
-  const BaseScaffold({Key? key, this.body}) : super(key: key);
+  const BaseScaffold({Key? key, this.body, this.heightRatio}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class BaseScaffold extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            height: _size.height * 0.4,
+            height: _size.height * (heightRatio != null ? heightRatio! : 1),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,

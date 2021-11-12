@@ -2,6 +2,7 @@
 
 import 'package:cryptocash/palette.dart';
 import 'package:cryptocash/screens/home_screen/home_screen.dart';
+import 'package:cryptocash/screens/reg_screen/boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -27,6 +28,11 @@ class App extends StatelessWidget {
               fontWeight: FontWeight.w700,
               fontSize: 20,
               color: Colors.white,
+            ),
+            headline5: GoogleFonts.exo2(
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+              fontSize: 30,
             ),
             headline6: GoogleFonts.exo2(
               fontSize: 18,
@@ -57,7 +63,7 @@ class App extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      home: HomeScreen(),
+      home: BoardingScreen(),
     );
   }
 }
