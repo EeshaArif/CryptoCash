@@ -79,7 +79,7 @@ class UseCaseScreen extends StatelessWidget {
                     height: 32,
                   ),
                   SecondaryActionButton(
-                    iconAsset: 'assets/buliding.svg',
+                    iconAsset: 'assets/building.svg',
                     text: 'For Business use',
                     onPress: () => {},
                   ),

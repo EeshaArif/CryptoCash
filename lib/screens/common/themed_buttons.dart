@@ -106,3 +106,43 @@ class PrimaryTextButton extends StatelessWidget {
     );
   }
 }
+
+class AuthBackButton extends StatelessWidget {
+  final void Function() onPress;
+  const AuthBackButton({
+    Key? key,
+    required this.onPress,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        TextButton(
+          style: ButtonStyle(
+            minimumSize: MaterialStateProperty.all(Size(32, 53)),
+            overlayColor:
+                MaterialStateProperty.all(Palette.darkBlue.withOpacity(0.1)),
+          ),
+          onPressed: onPress,
+          child: Row(
+            children: [
+              SvgPicture.asset(
+                'assets/arrowsquareleft.svg',
+              ),
+              SizedBox(width: 8),
+              Text(
+                'Back',
+                style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white.withOpacity(0.5),
+                    ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(child: SizedBox())
+      ],
+    );
+  }
+}

@@ -8,14 +8,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class SignupScreen extends StatefulWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+class SetPassScreen extends StatefulWidget {
+  const SetPassScreen({Key? key}) : super(key: key);
 
   @override
-  _SignupScreenState createState() => _SignupScreenState();
+  _SetPassScreenState createState() => _SetPassScreenState();
 }
 
-class _SignupScreenState extends State<SignupScreen> {
+class _SetPassScreenState extends State<SetPassScreen> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
