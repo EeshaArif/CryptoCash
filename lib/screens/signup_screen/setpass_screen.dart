@@ -3,7 +3,7 @@ import 'package:cryptocash/screens/base_scaffold.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart'
     show PrimaryActionButton, AuthBackButton;
 import 'package:cryptocash/screens/common/themed_fields.dart'
-    show AuthTextFormField;
+    show AuthPassFormField;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -86,7 +86,7 @@ class _SetPassScreenState extends State<SetPassScreen> {
                                 SizedBox(
                                   height: 32,
                                 ),
-                                Text('Sign up for Cryptocash',
+                                Text('Set Your Password',
                                     style:
                                         Theme.of(context).textTheme.headline3),
                                 SizedBox(
@@ -96,14 +96,12 @@ class _SetPassScreenState extends State<SetPassScreen> {
                                   key: _formKey,
                                   child: Column(
                                     children: [
-                                      AuthTextFormField(
-                                          label: 'Enter your name'),
+                                      AuthPassFormField(
+                                          label: 'Enter Password'),
                                       SizedBox(height: 12),
-                                      AuthTextFormField(
-                                          label: 'Enter Email Address'),
+                                      AuthPassFormField(
+                                          label: 'Confirm Password'),
                                       SizedBox(height: 12),
-                                      AuthTextFormField(
-                                          label: 'Enter Phone Number'),
                                     ],
                                   ),
                                 ),
@@ -112,7 +110,7 @@ class _SetPassScreenState extends State<SetPassScreen> {
                             Padding(
                               padding: const EdgeInsets.only(bottom: 16),
                               child: PrimaryActionButton(
-                                text: 'Continue',
+                                text: 'Create my account',
                                 onPress: () => {},
                               ),
                             ),
