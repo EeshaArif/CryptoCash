@@ -1,15 +1,18 @@
 import 'package:cryptocash/screens/base_scaffold.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart'
-    show PrimaryActionButton, PrimaryTextButton;
+    show SecondaryActionButton;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class BoardingScreen extends StatelessWidget {
-  const BoardingScreen({Key? key}) : super(key: key);
+import 'package:cryptocash/palette.dart';
+
+class UseCaseScreen extends StatelessWidget {
+  const UseCaseScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
+      heightRatio: 0.5,
       body: Column(
         children: [
           Expanded(
@@ -21,7 +24,6 @@ class BoardingScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 16, right: 32),
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SvgPicture.asset(
                         'assets/logo.svg',
@@ -39,7 +41,7 @@ class BoardingScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Spend your Crypto tokens like Cash',
+                      Text('How would you like to use crypto cash?',
                           style: Theme.of(context).textTheme.headline5),
                       SizedBox(
                         height: 24.0,
@@ -58,28 +60,45 @@ class BoardingScreen extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 4,
-            child: Padding(
+            flex: 6,
+            child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 32.0),
+              decoration: BoxDecoration(
+                color: Palette.darkBlue,
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('Get Started with Cryptocash',
+                  SizedBox(
+                    height: 32,
+                  ),
+                  Text('Choose how you want to proceed',
                       style: Theme.of(context).textTheme.headline3),
                   SizedBox(
                     height: 32,
                   ),
-                  PrimaryActionButton(
-                    text: 'Sign up to CryptoCash',
+                  SecondaryActionButton(
+                    iconAsset: 'assets/buliding.svg',
+                    text: 'For Business use',
+                    onPress: () => {},
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  SecondaryActionButton(
+                    iconAsset: 'assets/userfilled.svg',
+                    text: 'For Personal use',
                     onPress: () => {},
                   ),
                   SizedBox(
                     height: 32,
                   ),
-                  PrimaryTextButton(
-                    onPress: () => {},
-                    text: 'Login to your Account',
+                  Text(
+                    'Features and services will be different for business and personal account.',
+                    style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white.withOpacity(0.4)),
                   ),
                 ],
               ),
