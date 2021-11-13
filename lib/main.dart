@@ -28,6 +28,11 @@ class App extends StatelessWidget {
               fontSize: 20,
               color: Colors.white,
             ),
+            headline5: GoogleFonts.exo2(
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+              fontSize: 30,
+            ),
             headline6: GoogleFonts.exo2(
               fontSize: 18,
               fontWeight: FontWeight.w600,

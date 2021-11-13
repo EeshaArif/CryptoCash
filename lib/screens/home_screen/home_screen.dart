@@ -15,6 +15,7 @@ class HomeScreen extends StatelessWidget {
     final _size = MediaQuery.of(context).size;
 
     return BaseScaffold(
+      heightRatio: 0.4,
       body: Stack(
         children: [
           Column(
