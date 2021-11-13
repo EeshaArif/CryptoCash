@@ -3,19 +3,19 @@ import 'package:cryptocash/screens/base_scaffold.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart'
     show PrimaryActionButton, AuthBackButton;
 import 'package:cryptocash/screens/common/themed_fields.dart'
-    show AuthTextFormField;
+    show AuthPassFormField;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class SignupScreen extends StatefulWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+class SetTransPassScreen extends StatefulWidget {
+  const SetTransPassScreen({Key? key}) : super(key: key);
 
   @override
-  _SignupScreenState createState() => _SignupScreenState();
+  _SetTransPassScreenState createState() => _SetTransPassScreenState();
 }
 
-class _SignupScreenState extends State<SignupScreen> {
+class _SetTransPassScreenState extends State<SetTransPassScreen> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 SizedBox(
                                   height: 32,
                                 ),
-                                Text('Sign up for Cryptocash',
+                                Text('Set Your Password',
                                     style:
                                         Theme.of(context).textTheme.headline3),
                                 SizedBox(
@@ -96,14 +96,12 @@ class _SignupScreenState extends State<SignupScreen> {
                                   key: _formKey,
                                   child: Column(
                                     children: [
-                                      AuthTextFormField(
-                                          label: 'Enter your name'),
+                                      AuthPassFormField(
+                                          label: 'Enter Password'),
                                       SizedBox(height: 12),
-                                      AuthTextFormField(
-                                          label: 'Enter Email Address'),
+                                      AuthPassFormField(
+                                          label: 'Confirm Password'),
                                       SizedBox(height: 12),
-                                      AuthTextFormField(
-                                          label: 'Enter Phone Number'),
                                     ],
                                   ),
                                 ),
@@ -112,7 +110,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             Padding(
                               padding: const EdgeInsets.only(bottom: 16),
                               child: PrimaryActionButton(
-                                text: 'Continue',
+                                text: 'Create my account',
                                 onPress: () => {},
                               ),
                             ),
