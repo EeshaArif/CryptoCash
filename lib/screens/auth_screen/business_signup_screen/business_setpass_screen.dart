@@ -6,19 +6,19 @@ import 'package:cryptocash/screens/common/themed_fields.dart'
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PersonalSetPassScreen extends StatefulWidget {
-  const PersonalSetPassScreen({Key? key}) : super(key: key);
+class BusinessSetPassScreen extends StatefulWidget {
+  const BusinessSetPassScreen({Key? key}) : super(key: key);
 
   @override
-  _PersonalSetPassScreenState createState() => _PersonalSetPassScreenState();
+  _BusinessSetPassScreenState createState() => _BusinessSetPassScreenState();
 }
 
-class _PersonalSetPassScreenState extends State<PersonalSetPassScreen> {
+class _BusinessSetPassScreenState extends State<BusinessSetPassScreen> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return AuthBase(
-      headerText: 'Welcome to Cryptocash Personal',
+      headerText: 'Welcome to Cryptocash Business',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

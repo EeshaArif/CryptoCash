@@ -3,18 +3,18 @@ import 'package:cryptocash/screens/auth_screen/widgets/identity_verification_she
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PersonalVerifyScreen extends StatefulWidget {
-  const PersonalVerifyScreen({Key? key}) : super(key: key);
+class LoginVerifyScreen extends StatefulWidget {
+  const LoginVerifyScreen({Key? key}) : super(key: key);
 
   @override
-  _PersonalVerifyScreenState createState() => _PersonalVerifyScreenState();
+  _LoginVerifyScreenState createState() => _LoginVerifyScreenState();
 }
 
-class _PersonalVerifyScreenState extends State<PersonalVerifyScreen> {
+class _LoginVerifyScreenState extends State<LoginVerifyScreen> {
   @override
   Widget build(BuildContext context) {
     return AuthBase(
-      headerText: 'Welcome to Cryptocash Personal',
+      headerText: 'Almost There...',
       child: IdentityVerificationSheet(
         onComplete: (pin) {},
         onResend: () {},
