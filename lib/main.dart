@@ -1,6 +1,7 @@
 // @dart=2.9
 
 import 'package:cryptocash/palette.dart';
+import 'package:cryptocash/screens/auth_screen/login_screen/login_screen.dart';
 import 'package:cryptocash/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -62,7 +63,7 @@ class App extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }

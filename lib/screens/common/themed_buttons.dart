@@ -107,10 +107,12 @@ class PrimaryTextButton extends StatelessWidget {
   }
 }
 
-class AuthBackButton extends StatelessWidget {
+class TopBackButton extends StatelessWidget {
   final void Function() onPress;
-  const AuthBackButton({
+  final String text;
+  const TopBackButton({
     Key? key,
+    required this.text,
     required this.onPress,
   }) : super(key: key);
 
@@ -132,7 +134,7 @@ class AuthBackButton extends StatelessWidget {
               ),
               SizedBox(width: 8),
               Text(
-                'Back',
+                text,
                 style: Theme.of(context).textTheme.subtitle1?.copyWith(
                       fontWeight: FontWeight.w400,
                       color: Colors.white.withOpacity(0.5),

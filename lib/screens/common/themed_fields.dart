@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show FilteringTextInputFormatter;
 
 // TODO: Add validators
 class AuthTextFormField extends StatelessWidget {
@@ -36,6 +37,9 @@ class AuthPhoneFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: TextInputType.number,
+      inputFormatters: [
+        FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+      ],
       cursorColor: Colors.white,
       decoration: InputDecoration(
         labelText: label,
