@@ -1,8 +1,8 @@
 import 'package:cryptocash/screens/auth_screen/widgets/auth_base.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart'
-    show PrimaryActionButton, PrimaryTextButton;
+    show PrimaryActionButton;
 import 'package:cryptocash/screens/common/themed_fields.dart'
-    show AuthPassFormField, AuthTextFormField;
+    show AuthPassFormField, AuthPhoneFormField;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AuthTextFormField(label: 'Enter Phone Number'),
+                    AuthPhoneFormField(label: 'Enter Phone Number'),
                     SizedBox(height: 12),
                     AuthPassFormField(label: 'Enter Password'),
                     TextButton(

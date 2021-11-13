@@ -2,7 +2,7 @@ import 'package:cryptocash/screens/auth_screen/widgets/auth_base.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart'
     show PrimaryActionButton;
 import 'package:cryptocash/screens/common/themed_fields.dart'
-    show AuthTextFormField;
+    show AuthPhoneFormField, AuthTextFormField;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +42,7 @@ class _PersonalSignupScreenState extends State<PersonalSignupScreen> {
                     SizedBox(height: 12),
                     AuthTextFormField(label: 'Enter Email Address'),
                     SizedBox(height: 12),
-                    AuthTextFormField(label: 'Enter Phone Number'),
+                    AuthPhoneFormField(label: 'Enter Phone Number'),
                   ],
                 ),
               ),
