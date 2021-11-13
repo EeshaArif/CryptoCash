@@ -40,12 +40,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     AuthPassFormField(label: 'Enter Password'),
                     TextButton(
                       onPressed: () => {},
-                      child: Text('forgot password?',
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyText1
-                              ?.copyWith(
-                                  color: Colors.white12.withOpacity(0.2))),
+                      child: Text(
+                        'forgot password?',
+                        style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                              color: Colors.white12.withOpacity(0.2),
+                            ),
+                      ),
                     ),
                   ],
                 ),
