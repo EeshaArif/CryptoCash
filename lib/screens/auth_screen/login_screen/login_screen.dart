@@ -1,6 +1,6 @@
 import 'package:cryptocash/screens/auth_screen/widgets/auth_base.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart'
-    show PrimaryActionButton;
+    show PrimaryActionButton, PrimaryTextButton;
 import 'package:cryptocash/screens/common/themed_fields.dart'
     show AuthPassFormField, AuthTextFormField;
 import 'package:flutter/cupertino.dart';
@@ -33,10 +33,20 @@ class _LoginScreenState extends State<LoginScreen> {
               Form(
                 key: _formKey,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     AuthTextFormField(label: 'Enter Phone Number'),
                     SizedBox(height: 12),
                     AuthPassFormField(label: 'Enter Password'),
+                    TextButton(
+                      onPressed: () => {},
+                      child: Text('forgot password?',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText1
+                              ?.copyWith(
+                                  color: Colors.white12.withOpacity(0.2))),
+                    ),
                   ],
                 ),
               ),

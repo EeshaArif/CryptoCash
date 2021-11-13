@@ -6,19 +6,19 @@ import 'package:cryptocash/screens/common/themed_fields.dart'
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SetTransPassScreen extends StatefulWidget {
-  const SetTransPassScreen({Key? key}) : super(key: key);
+class ResetPassScreen extends StatefulWidget {
+  const ResetPassScreen({Key? key}) : super(key: key);
 
   @override
-  _SetTransPassScreenState createState() => _SetTransPassScreenState();
+  _ResetPassScreenState createState() => _ResetPassScreenState();
 }
 
-class _SetTransPassScreenState extends State<SetTransPassScreen> {
+class _ResetPassScreenState extends State<ResetPassScreen> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return AuthBase(
-      headerText: 'Sign Up Complete! Just one more thing...',
+      headerText: 'Reset your Password',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,15 +29,8 @@ class _SetTransPassScreenState extends State<SetTransPassScreen> {
               SizedBox(
                 height: 32,
               ),
-              Text('Transaction Password',
+              Text('Set New Password',
                   style: Theme.of(context).textTheme.headline3),
-              SizedBox(height: 16),
-              Text(
-                'Set up a transaction password, so we can verify that it is actually you making the transaction.',
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white.withOpacity(0.4)),
-              ),
               SizedBox(
                 height: 32,
               ),
@@ -45,9 +38,9 @@ class _SetTransPassScreenState extends State<SetTransPassScreen> {
                 key: _formKey,
                 child: Column(
                   children: [
-                    AuthPassFormField(label: 'Enter transaction password'),
+                    AuthPassFormField(label: 'Enter new Password'),
                     SizedBox(height: 12),
-                    AuthPassFormField(label: 'Confirm transaction password'),
+                    AuthPassFormField(label: 'Confirm Password'),
                     SizedBox(height: 12),
                   ],
                 ),
@@ -57,7 +50,7 @@ class _SetTransPassScreenState extends State<SetTransPassScreen> {
           Padding(
             padding: const EdgeInsets.only(bottom: 16),
             child: PrimaryActionButton(
-              text: 'Continue',
+              text: 'Reset',
               onPress: () => {},
             ),
           ),

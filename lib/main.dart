@@ -4,8 +4,10 @@ import 'package:cryptocash/palette.dart';
 import 'package:cryptocash/screens/auth_screen/business_signup_screen/business_setpass_screen.dart';
 import 'package:cryptocash/screens/auth_screen/business_signup_screen/business_signup_screen.dart';
 import 'package:cryptocash/screens/auth_screen/business_signup_screen/business_verify_screen.dart';
+import 'package:cryptocash/screens/auth_screen/forgotpassverify_screen.dart';
 import 'package:cryptocash/screens/auth_screen/login_screen/login_screen.dart';
 import 'package:cryptocash/screens/auth_screen/login_screen/loginverify_screen.dart';
+import 'package:cryptocash/screens/auth_screen/resetpass_screen.dart';
 import 'package:cryptocash/screens/auth_screen/settranspass_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -67,7 +69,7 @@ class App extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      home: LoginScreen(),
+      home: ResetPassScreen(),
     );
   }
 }
