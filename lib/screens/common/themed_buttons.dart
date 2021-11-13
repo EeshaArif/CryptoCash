@@ -109,10 +109,10 @@ class PrimaryTextButton extends StatelessWidget {
 
 class TopBackButton extends StatelessWidget {
   final void Function() onPress;
-  final String text;
+  final String? text;
   const TopBackButton({
     Key? key,
-    required this.text,
+    this.text,
     required this.onPress,
   }) : super(key: key);
 
@@ -134,17 +134,49 @@ class TopBackButton extends StatelessWidget {
               ),
               SizedBox(width: 8),
               Text(
-                text,
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white.withOpacity(0.5),
-                    ),
+                text != null ? text.toString() : 'Back',
+                style: text != null
+                    ? Theme.of(context).textTheme.headline6?.copyWith(
+                          fontSize: 20,
+                        )
+                    : Theme.of(context).textTheme.subtitle1?.copyWith(
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white.withOpacity(0.5),
+                        ),
               ),
             ],
           ),
         ),
         Expanded(child: SizedBox())
       ],
+    );
+  }
+}
+
+class CardActionButton extends StatelessWidget {
+  final void Function() onPress;
+  final String text;
+  const CardActionButton({
+    Key? key,
+    required this.onPress,
+    required this.text,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPress,
+      child: Text(
+        text,
+        style: Theme.of(context).textTheme.bodyText1,
+      ),
+      style: ButtonStyle(
+        minimumSize: MaterialStateProperty.all(Size(double.infinity, 45)),
+        shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+        shadowColor: MaterialStateProperty.all(Colors.transparent),
+        backgroundColor: MaterialStateProperty.all(Palette.darkOrange),
+      ),
     );
   }
 }

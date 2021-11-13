@@ -49,6 +49,7 @@ flutter:
     - assets/
     - assets/coins/
     - assets/transactions/
+    - assets/donations/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
