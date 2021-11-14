@@ -1,3 +1,4 @@
+import 'package:cryptocash/screens/rewards_screen/widgets/donation_points_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -48,19 +49,7 @@ class DonationCard extends StatelessWidget {
                       ),
                 ),
                 SizedBox(height: 6),
-                Container(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 8,
-                    horizontal: 12,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Color(0xFFFF8C4B),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(4),
-                    ),
-                  ),
-                  child: Text('$points pts'),
-                )
+                DonationPointsCard(points: points),
               ],
             ),
           ),

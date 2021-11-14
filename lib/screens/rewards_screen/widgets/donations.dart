@@ -1,17 +1,18 @@
+import 'package:cryptocash/palette.dart';
 import 'package:cryptocash/screens/rewards_screen/widgets/donation_card.dart';
 import 'package:flutter/material.dart';
 
 final donations = [
   DonationCard(
     onPress: () => {},
-    color: Color(0xFF6197FF).withOpacity(0.32),
+    color: Palette.foodDonationCard,
     svgAsset: 'lovely.svg',
     text: 'Feed a child',
     points: 360,
   ),
   DonationCard(
     onPress: () => {},
-    color: Color(0xFF61FFA0).withOpacity(0.32),
+    color: Palette.plantDonationCard,
     svgAsset: 'trees.svg',
     text: 'Plant a tree',
     points: 360,

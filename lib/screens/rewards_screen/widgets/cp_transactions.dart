@@ -1,4 +1,4 @@
-import 'package:cryptocash/screens/rewards_screen/widgets/cptransaction_card.dart';
+import 'package:cryptocash/screens/rewards_screen/widgets/cp_transaction_card.dart';
 import 'package:flutter/material.dart';
 
 class CpTransactions extends StatelessWidget {
@@ -10,14 +10,14 @@ class CpTransactions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        cpTransactionCard(
+        CpTransactionCard(
           points: 1000,
           transactionDate: '3 May, 2021',
           transactionTime: '4:54 PM',
           type: cpType.reward,
           transactionText: 'Deposit Rewards',
         ),
-        cpTransactionCard(
+        CpTransactionCard(
           points: 560,
           transactionDate: '3 May, 2021',
           transactionTime: '4:54 PM',

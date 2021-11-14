@@ -1,15 +1,16 @@
+import 'package:cryptocash/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 enum cpType { reward, donation }
 
-class cpTransactionCard extends StatelessWidget {
+class CpTransactionCard extends StatelessWidget {
   final cpType type;
   final String transactionText;
   final String transactionDate;
   final String transactionTime;
   final int points;
-  const cpTransactionCard({
+  const CpTransactionCard({
     Key? key,
     required this.points,
     required this.type,
@@ -30,7 +31,7 @@ class cpTransactionCard extends StatelessWidget {
             bottom: 18,
           ),
           decoration: BoxDecoration(
-            color: Color(0xFF373154),
+            color: Palette.transactionCard,
             borderRadius: BorderRadius.all(
               Radius.circular(8),
             ),
@@ -59,8 +60,8 @@ class cpTransactionCard extends StatelessWidget {
                 '${type == cpType.reward ? '+' : '-'}$points CP',
                 style: Theme.of(context).textTheme.headline6?.copyWith(
                       color: type == cpType.reward
-                          ? Color(0xFF2DF1C2)
-                          : Color(0xFFEC5555),
+                          ? Palette.cashIn
+                          : Palette.cashOut,
                     ),
               ),
             ],

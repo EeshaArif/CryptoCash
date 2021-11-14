@@ -11,6 +11,10 @@ class Palette {
   static final faded = Colors.white.withOpacity(0.6);
   static const fadedIcon = Color(0xFF565666);
 
+  static const donationPointsCard = Color(0xFFFF8C4B);
+  static final foodDonationCard = Color(0xFF6197FF).withOpacity(0.32);
+  static final plantDonationCard = Color(0xFF61FFA0).withOpacity(0.32);
+
   static final coinCardStartGradient = Color(0xFFE0DAFF).withOpacity(0.2);
   static final coinCardEndGradient = Color(0xFF6E6D9A).withOpacity(0.2);
 
