@@ -29,13 +29,13 @@ class DonationCard extends StatelessWidget {
           isScrollControlled: true, // set this to true
           builder: (_) {
             return DonationInfoSheet(
+              points: points,
               onRedeem: onRedeem,
               title: text,
               svgAsset: svgAsset,
               info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
                   'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
                   'quis tortor dolor parturient pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
-                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
                   'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
                   'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
                   'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +

@@ -1,6 +1,7 @@
 import 'package:cryptocash/palette.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart'
     show PrimaryActionButton;
+import 'package:cryptocash/screens/rewards_screen/widgets/donation_points_card.dart';
 import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -10,12 +11,14 @@ class DonationInfoSheet extends StatelessWidget {
   final String svgAsset;
   final String title;
   final String info;
+  final int points;
   const DonationInfoSheet({
     Key? key,
     required this.onRedeem,
     required this.info,
     required this.title,
     required this.svgAsset,
+    required this.points,
   }) : super(key: key);
 
   @override
@@ -62,7 +65,13 @@ class DonationInfoSheet extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SvgPicture.asset('assets/donations/$svgAsset'),
-                        Text('$title for good', style: tUpperTitle),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('$title for good', style: tUpperTitle),
+                            DonationPointsCard(points: points),
+                          ],
+                        ),
                         SizedBox(
                           height: 24,
                         ),
