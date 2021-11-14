@@ -1,5 +1,6 @@
 import 'package:cryptocash/palette.dart';
 import 'package:cryptocash/screens/common/purple_tile.dart';
+import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -33,7 +34,7 @@ class CpTransactionCard extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     '$transactionText',
-                    style: Theme.of(context).textTheme.headline6,
+                    style: tPurpleTileText1,
                   ),
                   Text(
                     '$transactionDate at $transactionTime',

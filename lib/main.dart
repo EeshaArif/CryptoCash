@@ -1,6 +1,7 @@
 // @dart=2.9
 
 import 'package:cryptocash/palette.dart';
+import 'package:cryptocash/screens/rewards_screen/convert_success_screen.dart';
 import 'package:cryptocash/screens/rewards_screen/cp_convert_screen.dart';
 import 'package:cryptocash/screens/rewards_screen/rewards_screen.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +64,7 @@ class App extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      home: RewardsScreen(),
+      home: ConvertSuccessScreen(),
     );
   }
 }
