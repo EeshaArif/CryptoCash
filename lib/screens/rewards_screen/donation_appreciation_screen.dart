@@ -35,25 +35,33 @@ class DonationAppreciationScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Lottie.asset(
-              'assets/confetti.json',
-              width: MediaQuery.of(context).size.width / 2,
-            ),
-            Text('THANKYOU!', style: tNumberTitle),
-            Text(
-              'for making an impact',
-              style: Theme.of(context).textTheme.headline6?.copyWith(
-                    fontSize: 20,
-                  ),
-            ),
-            SizedBox(height: 32),
-            Text('Points donated',
-                style: Theme.of(context).textTheme.headline6),
-            Text(
-              '${12000} cp',
-              style: Theme.of(context).textTheme.headline6?.copyWith(
-                    fontSize: 30,
-                  ),
+            Stack(
+              alignment: AlignmentDirectional.bottomCenter,
+              children: [
+                Lottie.asset(
+                  'assets/confetti.json',
+                ),
+                Column(
+                  children: [
+                    Text('THANKYOU!', style: tNumberTitle),
+                    Text(
+                      'for making an impact',
+                      style: Theme.of(context).textTheme.headline6?.copyWith(
+                            fontSize: 20,
+                          ),
+                    ),
+                    SizedBox(height: 32),
+                    Text('Points donated',
+                        style: Theme.of(context).textTheme.headline6),
+                    Text(
+                      '${12000} cp',
+                      style: Theme.of(context).textTheme.headline6?.copyWith(
+                            fontSize: 30,
+                          ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),
