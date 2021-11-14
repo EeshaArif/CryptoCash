@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 
 final donations = [
   DonationCard(
-    onPress: () => {},
+    onRedeem: () => {},
     color: Palette.foodDonationCard,
     svgAsset: 'lovely.svg',
     text: 'Feed a child',
     points: 360,
   ),
   DonationCard(
-    onPress: () => {},
+    onRedeem: () => {},
     color: Palette.plantDonationCard,
     svgAsset: 'trees.svg',
     text: 'Plant a tree',

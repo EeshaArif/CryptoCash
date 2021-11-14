@@ -1,16 +1,17 @@
+import 'package:cryptocash/screens/rewards_screen/widgets/donation_info_sheet.dart';
 import 'package:cryptocash/screens/rewards_screen/widgets/donation_points_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class DonationCard extends StatelessWidget {
-  final void Function() onPress;
+  final void Function() onRedeem;
   final Color color;
   final String text;
   final int points;
   final String svgAsset;
   const DonationCard({
     Key? key,
-    required this.onPress,
+    required this.onRedeem,
     required this.color,
     required this.text,
     required this.points,
@@ -20,7 +21,31 @@ class DonationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
-      onPressed: onPress,
+      onPressed: () => {
+        showModalBottomSheet(
+          clipBehavior: Clip.none,
+          backgroundColor: Colors.transparent,
+          context: context,
+          isScrollControlled: true, // set this to true
+          builder: (_) {
+            return DonationInfoSheet(
+              onRedeem: onRedeem,
+              title: text,
+              svgAsset: svgAsset,
+              info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
+                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                  'quis tortor dolor parturient pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
+                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices quis tortor dolor parturient pellentesque.',
+            );
+          },
+        ),
+      },
       child: Stack(
         children: [
           Container(

@@ -4,6 +4,7 @@ class Palette {
   static const darkBlue = Color(0xFF0C0728);
   static const darkPurple = Color(0xFF241A58);
   static final lightPurple = Color(0xFF9188BE).withOpacity(0.3);
+  static final fadedPurple = Color(0xFF7B61FF).withOpacity(0.5);
   static const purple = Color(0xFF3F3E9E);
   static const darkOrange = Color(0xFFEC5555);
   static const orange = Color(0xFFFF6161);
