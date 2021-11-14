@@ -1,4 +1,5 @@
 import 'package:cryptocash/palette.dart';
+import 'package:cryptocash/screens/common/purple_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -23,19 +24,7 @@ class CpTransactionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          padding: const EdgeInsets.only(
-            left: 24,
-            right: 16,
-            top: 18,
-            bottom: 18,
-          ),
-          decoration: BoxDecoration(
-            color: Palette.transactionCard,
-            borderRadius: BorderRadius.all(
-              Radius.circular(8),
-            ),
-          ),
+        PurpleTileContainer(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[

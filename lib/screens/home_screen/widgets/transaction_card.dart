@@ -13,7 +13,7 @@ class TransactionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Palette.transactionCard,
+        color: Palette.purpleTileContainer,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
