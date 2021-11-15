@@ -182,7 +182,6 @@ class CardActionButton extends StatelessWidget {
     );
   }
 }
-// TODO: add this to themed_fields after merging #1
 
 class AmountFormField extends StatelessWidget {
   const AmountFormField({

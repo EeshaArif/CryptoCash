@@ -9,13 +9,15 @@ import 'package:cryptocash/screens/home_screen/widgets/transactions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+const double kCommonGradientHeightRatio = 0.4;
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _size = MediaQuery.of(context).size;
 
     return BaseScaffold(
-      heightRatio: 0.4,
+      heightRatio: kCommonGradientHeightRatio,
       body: Stack(
         children: [
           Column(
