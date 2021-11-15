@@ -67,7 +67,7 @@ class CpConvertSuccessScreen extends StatelessWidget {
             ),
           ),
           PrimaryActionButton(
-            onPress: () => {},
+            onPress: () => Navigator.pushNamed(context, '/rewards'),
             text: 'Back to Rewards',
           ),
           SizedBox(

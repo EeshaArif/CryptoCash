@@ -126,7 +126,10 @@ class TopBackButton extends StatelessWidget {
             overlayColor:
                 MaterialStateProperty.all(Palette.darkBlue.withOpacity(0.1)),
           ),
-          onPressed: onPress,
+          onPressed: () => {
+            Navigator.pop(context),
+            onPress.call(),
+          },
           child: Row(
             children: [
               SvgPicture.asset(
