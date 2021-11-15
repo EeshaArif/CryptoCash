@@ -36,3 +36,18 @@ final TextStyle tNumberTextTitle = GoogleFonts.exo2(
   fontWeight: FontWeight.w600,
   color: Colors.white,
 );
+final TextStyle tRewardsCardSubtitle = GoogleFonts.exo(
+  fontSize: 13,
+  fontWeight: FontWeight.w700,
+  color: Colors.white,
+);
+final TextStyle tRewardsCardTitle = GoogleFonts.exo(
+  fontSize: 18,
+  fontWeight: FontWeight.w500,
+  color: Colors.white,
+);
+final TextStyle tRewardsCardText = GoogleFonts.exo(
+  fontSize: 13,
+  fontWeight: FontWeight.w500,
+  color: Colors.white.withOpacity(0.6),
+);

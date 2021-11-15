@@ -34,6 +34,7 @@ class _ConvertCoinToVpkrScreenState extends State<ConvertCoinToVpkrScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 32.0),
             child: Stack(
               children: [
+                // TODO: Add cupertino picker for ios
                 DropdownButtonHideUnderline(
                   child: DropdownButton(
                     dropdownColor: Palette.purpleTileContainer,
@@ -124,7 +125,7 @@ class _ConvertCoinToVpkrScreenState extends State<ConvertCoinToVpkrScreen> {
                 PrimaryActionButton(
                   onPress: () => Navigator.pushNamed(
                     context,
-                    '/cp-convert-success',
+                    '/vpkr-purchase-success',
                   ),
                   text: 'Continue to Payment',
                 ),

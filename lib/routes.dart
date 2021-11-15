@@ -10,7 +10,8 @@ import 'package:cryptocash/screens/auth_screen/personal_signup_screen/personal_v
 import 'package:cryptocash/screens/auth_screen/resetpass_screen.dart';
 import 'package:cryptocash/screens/auth_screen/settranspass_screen.dart';
 import 'package:cryptocash/screens/auth_screen/usecase_screen.dart';
-import 'package:cryptocash/screens/buy_vpkr_screen/convert_coin_to_vpkr.dart';
+import 'package:cryptocash/screens/buy_vpkr_screen/convert_coin_to_vpkr_screen.dart';
+import 'package:cryptocash/screens/buy_vpkr_screen/vpkr_purchase_success_screen.dart';
 import 'package:cryptocash/screens/home_screen/home_screen.dart';
 import 'package:cryptocash/screens/rewards_screen/convert_point_to_vpkr_screen.dart';
 import 'package:cryptocash/screens/rewards_screen/cp_convert_success_screen.dart';
@@ -98,6 +99,10 @@ class AppRouter {
       case '/convert-coin-to-vpkr':
         return MaterialPageRoute(
           builder: (context) => ConvertCoinToVpkrScreen(),
+        );
+      case '/vpkr-purchase-success':
+        return MaterialPageRoute(
+          builder: (context) => VpkrPurchaseSuccessScreen(),
         );
 
       default:
