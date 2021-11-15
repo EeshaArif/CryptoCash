@@ -4,7 +4,7 @@ import 'package:cryptocash/screens/common/themed_buttons.dart'
     show CardActionButton, TopBackButton;
 import 'package:cryptocash/screens/rewards_screen/widgets/cp_transactions.dart';
 import 'package:cryptocash/screens/rewards_screen/widgets/donations.dart';
-import 'package:cryptocash/screens/rewards_screen/widgets/expanded_base.dart';
+import 'package:cryptocash/screens/common/expanded_base.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -125,7 +125,8 @@ class RewardsHeader extends StatelessWidget {
           ),
           CardActionButton(
             text: 'Convert my points to vPKR',
-            onPress: () => Navigator.pushNamed(context, '/cp-convert'),
+            onPress: () =>
+                Navigator.pushNamed(context, '/convert-point-to-vpkr'),
           ),
         ],
       ),

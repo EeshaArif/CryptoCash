@@ -52,7 +52,8 @@ class BalanceCard extends StatelessWidget {
                   ),
                 ),
                 elevation: MaterialStateProperty.all(0)),
-            onPressed: () {},
+            onPressed: () =>
+                Navigator.pushNamed(context, '/convert-coin-to-vpkr'),
             child: Container(
               width: _size.width,
               child: Text(

@@ -1,6 +1,6 @@
 import 'package:cryptocash/screens/common/purple_tile.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart';
-import 'package:cryptocash/screens/rewards_screen/widgets/expanded_base.dart';
+import 'package:cryptocash/screens/common/expanded_base.dart';
 import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
