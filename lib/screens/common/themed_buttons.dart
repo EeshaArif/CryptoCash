@@ -126,7 +126,10 @@ class TopBackButton extends StatelessWidget {
             overlayColor:
                 MaterialStateProperty.all(Palette.darkBlue.withOpacity(0.1)),
           ),
-          onPressed: onPress,
+          onPressed: () => {
+            Navigator.pop(context),
+            onPress.call(),
+          },
           child: Row(
             children: [
               SvgPicture.asset(
@@ -149,6 +152,34 @@ class TopBackButton extends StatelessWidget {
         ),
         Expanded(child: SizedBox())
       ],
+    );
+  }
+}
+
+class CardActionButton extends StatelessWidget {
+  final void Function() onPress;
+  final String text;
+  const CardActionButton({
+    Key? key,
+    required this.onPress,
+    required this.text,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPress,
+      child: Text(
+        text,
+        style: Theme.of(context).textTheme.bodyText1,
+      ),
+      style: ButtonStyle(
+        minimumSize: MaterialStateProperty.all(Size(double.infinity, 45)),
+        shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+        shadowColor: MaterialStateProperty.all(Colors.transparent),
+        backgroundColor: MaterialStateProperty.all(Palette.darkOrange),
+      ),
     );
   }
 }

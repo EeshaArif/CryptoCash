@@ -51,7 +51,7 @@ class _PersonalSetPassScreenState extends State<PersonalSetPassScreen> {
             padding: const EdgeInsets.only(bottom: 16),
             child: PrimaryActionButton(
               text: 'Create my account',
-              onPress: () => {},
+              onPress: () => Navigator.pushNamed(context, '/personal-verify'),
             ),
           ),
         ],

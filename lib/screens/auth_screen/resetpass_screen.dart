@@ -51,7 +51,7 @@ class _ResetPassScreenState extends State<ResetPassScreen> {
             padding: const EdgeInsets.only(bottom: 16),
             child: PrimaryActionButton(
               text: 'Reset',
-              onPress: () => {},
+              onPress: () => Navigator.pushNamed(context, '/login'),
             ),
           ),
         ],

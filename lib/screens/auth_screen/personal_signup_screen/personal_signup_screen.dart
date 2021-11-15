@@ -52,7 +52,7 @@ class _PersonalSignupScreenState extends State<PersonalSignupScreen> {
             padding: const EdgeInsets.only(bottom: 16),
             child: PrimaryActionButton(
               text: 'Continue',
-              onPress: () => {},
+              onPress: () => Navigator.pushNamed(context, '/personal-set-pass'),
             ),
           ),
         ],

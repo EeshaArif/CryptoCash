@@ -12,8 +12,8 @@ class BaseScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _size = MediaQuery.of(context).size;
-
     return Scaffold(
+      backgroundColor: Palette.darkBlue,
       body: Stack(
         children: [
           Container(

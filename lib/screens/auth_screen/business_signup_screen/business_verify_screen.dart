@@ -18,7 +18,7 @@ class _BusinessVerifyScreenState extends State<BusinessVerifyScreen> {
       child: IdentityVerificationSheet(
         onComplete: (pin) {},
         onResend: () {},
-        onVerify: () {},
+        onVerify: () => Navigator.pushNamed(context, '/set-trans-pass'),
       ),
     );
   }

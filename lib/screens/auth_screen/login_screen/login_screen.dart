@@ -39,7 +39,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(height: 12),
                     AuthPassFormField(label: 'Enter Password'),
                     TextButton(
-                      onPressed: () => {},
+                      onPressed: () =>
+                          Navigator.pushNamed(context, '/forgot-pass-verify'),
                       child: Text(
                         'forgot password?',
                         style: Theme.of(context).textTheme.bodyText1?.copyWith(
@@ -56,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: const EdgeInsets.only(bottom: 16),
             child: PrimaryActionButton(
               text: 'Continue',
-              onPress: () => {},
+              onPress: () => Navigator.pushNamed(context, '/login-verify'),
             ),
           ),
         ],

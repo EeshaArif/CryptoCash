@@ -72,13 +72,13 @@ class BoardingScreen extends StatelessWidget {
                   ),
                   PrimaryActionButton(
                     text: 'Sign up to CryptoCash',
-                    onPress: () => {},
+                    onPress: () => Navigator.pushNamed(context, '/usecase'),
                   ),
                   SizedBox(
                     height: 32,
                   ),
                   PrimaryTextButton(
-                    onPress: () => {},
+                    onPress: () => Navigator.pushNamed(context, '/login'),
                     text: 'Login to your Account',
                   ),
                 ],
