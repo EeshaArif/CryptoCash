@@ -1,3 +1,4 @@
+import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show FilteringTextInputFormatter;
 
@@ -101,6 +102,31 @@ class _AuthPassFormFieldState extends State<AuthPassFormField> {
           borderRadius: BorderRadius.circular(10),
         ),
       ),
+    );
+  }
+}
+
+class AmountFormField extends StatelessWidget {
+  const AmountFormField({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      keyboardType: TextInputType.numberWithOptions(decimal: true),
+      autofocus: true,
+      inputFormatters: [
+        FilteringTextInputFormatter.allow(RegExp(r'\d*\.?\d*')),
+      ],
+      decoration: InputDecoration(
+        enabledBorder: InputBorder.none,
+        focusedBorder: InputBorder.none,
+      ),
+      textAlign: TextAlign.center,
+      cursorColor: Colors.white,
+      // 100000.00.toString(),
+      style: tNumberTitle,
     );
   }
 }

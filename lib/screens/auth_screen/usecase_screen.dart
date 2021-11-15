@@ -81,7 +81,8 @@ class UseCaseScreen extends StatelessWidget {
                   SecondaryActionButton(
                     iconAsset: 'assets/building.svg',
                     text: 'For Business use',
-                    onPress: () => {},
+                    onPress: () =>
+                        Navigator.pushNamed(context, '/business-signup'),
                   ),
                   SizedBox(
                     height: 24,
@@ -89,7 +90,8 @@ class UseCaseScreen extends StatelessWidget {
                   SecondaryActionButton(
                     iconAsset: 'assets/userfilled.svg',
                     text: 'For Personal use',
-                    onPress: () => {},
+                    onPress: () =>
+                        Navigator.pushNamed(context, '/personal-signup'),
                   ),
                   SizedBox(
                     height: 32,

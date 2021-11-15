@@ -1,7 +1,10 @@
 import 'package:cryptocash/screens/common/themed_buttons.dart'
-    show AmountFormField, PrimaryActionButton, TopBackButton;
+    show PrimaryActionButton, TopBackButton;
+import 'package:cryptocash/screens/common/themed_fields.dart'
+    show AmountFormField;
 import 'package:cryptocash/screens/rewards_screen/widgets/expanded_base.dart';
-import 'package:cryptocash/styles.dart';
+import 'package:cryptocash/styles.dart'
+    show tNumberTextTitle, tNumberTitle, tUpperAvailable, tUpperConversionRate;
 import 'package:flutter/material.dart';
 
 class CpConvertScreen extends StatefulWidget {
@@ -81,7 +84,10 @@ class _CpConvertScreenState extends State<CpConvertScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 PrimaryActionButton(
-                  onPress: () => {},
+                  onPress: () => Navigator.pushNamed(
+                    context,
+                    '/cp-convert-success',
+                  ),
                   text: 'Convert to vPKR',
                 ),
                 SizedBox(),

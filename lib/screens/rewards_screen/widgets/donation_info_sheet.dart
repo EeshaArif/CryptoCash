@@ -83,7 +83,11 @@ class DonationInfoSheet extends StatelessWidget {
                           height: 24,
                         ),
                         PrimaryActionButton(
-                          onPress: onRedeem,
+                          onPress: () => {
+                            onRedeem.call(),
+                            Navigator.pushNamed(
+                                context, '/donation-appreciation'),
+                          },
                           text: 'Redeem Points now for good',
                         ),
                       ],

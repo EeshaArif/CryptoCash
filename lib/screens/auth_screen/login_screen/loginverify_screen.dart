@@ -18,7 +18,7 @@ class _LoginVerifyScreenState extends State<LoginVerifyScreen> {
       child: IdentityVerificationSheet(
         onComplete: (pin) {},
         onResend: () {},
-        onVerify: () {},
+        onVerify: () => Navigator.pushNamed(context, '/home'),
       ),
     );
   }

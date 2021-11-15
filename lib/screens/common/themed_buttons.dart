@@ -1,7 +1,5 @@
 import 'package:cryptocash/palette.dart';
-import 'package:cryptocash/styles.dart' show tNumberTitle;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show FilteringTextInputFormatter;
 import 'package:flutter_svg/svg.dart';
 
 class PrimaryActionButton extends StatelessWidget {
@@ -179,31 +177,6 @@ class CardActionButton extends StatelessWidget {
         shadowColor: MaterialStateProperty.all(Colors.transparent),
         backgroundColor: MaterialStateProperty.all(Palette.darkOrange),
       ),
-    );
-  }
-}
-
-class AmountFormField extends StatelessWidget {
-  const AmountFormField({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField(
-      keyboardType: TextInputType.numberWithOptions(decimal: true),
-      autofocus: true,
-      inputFormatters: [
-        FilteringTextInputFormatter.allow(RegExp(r'\d*\.?\d*')),
-      ],
-      decoration: InputDecoration(
-        enabledBorder: InputBorder.none,
-        focusedBorder: InputBorder.none,
-      ),
-      textAlign: TextAlign.center,
-      cursorColor: Colors.white,
-      // 100000.00.toString(),
-      style: tNumberTitle,
     );
   }
 }

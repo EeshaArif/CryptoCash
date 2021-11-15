@@ -58,7 +58,7 @@ class _SetTransPassScreenState extends State<SetTransPassScreen> {
             padding: const EdgeInsets.only(bottom: 16),
             child: PrimaryActionButton(
               text: 'Continue',
-              onPress: () => {},
+              onPress: () => Navigator.pushNamed(context, '/home'),
             ),
           ),
         ],

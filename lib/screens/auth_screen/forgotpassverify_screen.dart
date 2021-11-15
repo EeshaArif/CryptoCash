@@ -18,7 +18,7 @@ class _ForgotPassVerifyScreenState extends State<ForgotPassVerifyScreen> {
       child: IdentityVerificationSheet(
         onComplete: (pin) {},
         onResend: () {},
-        onVerify: () {},
+        onVerify: () => Navigator.pushNamed(context, '/reset-pass'),
       ),
     );
   }

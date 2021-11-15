@@ -18,7 +18,7 @@ class _PersonalVerifyScreenState extends State<PersonalVerifyScreen> {
       child: IdentityVerificationSheet(
         onComplete: (pin) {},
         onResend: () {},
-        onVerify: () {},
+        onVerify: () => Navigator.pushNamed(context, '/set-trans-pass'),
       ),
     );
   }

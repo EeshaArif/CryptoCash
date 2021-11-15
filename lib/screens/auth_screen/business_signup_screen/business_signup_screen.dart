@@ -52,7 +52,7 @@ class _BusinessSignupScreenState extends State<BusinessSignupScreen> {
             padding: const EdgeInsets.only(bottom: 16),
             child: PrimaryActionButton(
               text: 'Continue',
-              onPress: () => {},
+              onPress: () => Navigator.pushNamed(context, '/business-set-pass'),
             ),
           ),
         ],

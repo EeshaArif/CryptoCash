@@ -36,38 +36,41 @@ class HomeScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        'assets/cup.svg',
-                        color: Palette.orange,
-                      ).pad(
-                        padding: EdgeInsets.only(
-                          right: 5,
-                        ),
-                      ),
-                      Text(
-                        '5665 Points',
-                        style: Theme.of(context).textTheme.bodyText1,
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        child: IconButton(
-                          padding: EdgeInsets.zero,
-                          constraints: BoxConstraints(),
-                          onPressed: () {},
-                          iconSize: 40,
-                          icon: Icon(
-                            Icons.arrow_right_rounded,
-                          ).pad(
-                            padding: EdgeInsets.only(
-                              top: 2,
-                            ),
+                  RawMaterialButton(
+                    onPressed: () => Navigator.pushNamed(context, '/rewards'),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          'assets/cup.svg',
+                          color: Palette.orange,
+                        ).pad(
+                          padding: EdgeInsets.only(
+                            right: 5,
                           ),
                         ),
-                      )
-                    ],
+                        Text(
+                          '5665 Points',
+                          style: Theme.of(context).textTheme.bodyText1,
+                        ),
+                        Material(
+                          color: Colors.transparent,
+                          child: IconButton(
+                            padding: EdgeInsets.zero,
+                            constraints: BoxConstraints(),
+                            onPressed: () {},
+                            iconSize: 40,
+                            icon: Icon(
+                              Icons.arrow_right_rounded,
+                            ).pad(
+                              padding: EdgeInsets.only(
+                                top: 2,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ).pad(

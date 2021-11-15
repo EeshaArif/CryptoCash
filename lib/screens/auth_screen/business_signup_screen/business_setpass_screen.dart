@@ -51,7 +51,7 @@ class _BusinessSetPassScreenState extends State<BusinessSetPassScreen> {
             padding: const EdgeInsets.only(bottom: 16),
             child: PrimaryActionButton(
               text: 'Create my account',
-              onPress: () => {},
+              onPress: () => Navigator.pushNamed(context, '/business-verify'),
             ),
           ),
         ],

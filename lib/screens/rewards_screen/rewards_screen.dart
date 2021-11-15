@@ -125,7 +125,7 @@ class RewardsHeader extends StatelessWidget {
           ),
           CardActionButton(
             text: 'Convert my points to vPKR',
-            onPress: () => {},
+            onPress: () => Navigator.pushNamed(context, '/cp-convert'),
           ),
         ],
       ),
