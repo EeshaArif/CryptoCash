@@ -14,7 +14,6 @@ class VpkrPurchaseSuccessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseScaffold(
       heightRatio: 0.4,
-      // isLowerChildScrollable: true,
       body: LayoutBuilder(
         builder: (context, constraint) {
           return SingleChildScrollView(

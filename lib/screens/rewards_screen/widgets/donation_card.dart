@@ -26,7 +26,7 @@ class DonationCard extends StatelessWidget {
           clipBehavior: Clip.none,
           backgroundColor: Colors.transparent,
           context: context,
-          isScrollControlled: true, // set this to true
+          isScrollControlled: true,
           builder: (_) {
             return DonationInfoSheet(
               points: points,

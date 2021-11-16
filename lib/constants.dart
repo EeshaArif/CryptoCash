@@ -4,17 +4,20 @@ class Constants {
         logoAsset: 'assets/coins/bitcoin.svg',
         shortName: 'BTC',
         name: 'Bitcoin',
-        balance: 0.00002),
+        balance: 0.00002,
+        conversionRate: 50000),
     CryptoCurrency(
         logoAsset: 'assets/coins/usdt.svg',
         shortName: 'USDT',
         name: 'Tether',
-        balance: 43),
+        balance: 43,
+        conversionRate: 200),
     CryptoCurrency(
         logoAsset: 'assets/coins/ether.svg',
         shortName: 'ETH',
         name: 'Ether',
-        balance: 0.005),
+        balance: 0.005,
+        conversionRate: 20000),
   ];
 
   static final transactions = [
@@ -51,12 +54,14 @@ class CryptoCurrency {
   String logoAsset;
   String shortName;
   String name;
+  double conversionRate;
   double? balance;
 
   CryptoCurrency({
     required this.logoAsset,
     required this.shortName,
     required this.name,
+    required this.conversionRate,
     this.balance,
   });
 }

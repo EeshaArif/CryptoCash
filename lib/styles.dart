@@ -6,6 +6,11 @@ final TextStyle tPurpleTileText1 = GoogleFonts.exo2(
   fontWeight: FontWeight.w600,
   color: Colors.white,
 );
+final TextStyle tDraggableSheetFadedText = GoogleFonts.exo(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: Colors.white.withOpacity(0.72),
+);
 final TextStyle tUpperTitle = GoogleFonts.exo2(
   fontSize: 24,
   fontWeight: FontWeight.w600,
