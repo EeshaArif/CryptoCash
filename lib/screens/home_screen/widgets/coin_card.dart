@@ -25,90 +25,7 @@ class CoinCard extends StatelessWidget {
           context: context,
           isScrollControlled: true,
           builder: (_) {
-            return BottomDraggableBaseSheet(
-              child: Padding(
-                padding: const EdgeInsets.all(24.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Row(
-                      children: [
-                        SvgPicture.asset(cryptoCurrency.logoAsset),
-                        SizedBox(
-                          width: 14,
-                        ),
-                        Text(cryptoCurrency.shortName, style: tUpperTitle)
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Available ${cryptoCurrency.shortName}',
-                              style: tDraggableSheetFadedText,
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text(
-                              cryptoCurrency.balance.toString(),
-                              style: tUpperTitle,
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 32,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Total Value in PKR',
-                              style: tDraggableSheetFadedText,
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text(
-                              '${cryptoCurrency.balance! * cryptoCurrency.conversionRate}',
-                              style: tUpperTitle,
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      height: 32,
-                    ),
-                    Text(
-                      'Today\'s Conversion Rate',
-                      style: tDraggableSheetFadedText,
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      cryptoCurrency.conversionRate.toString(),
-                      style: tUpperTitle,
-                    ),
-                    SizedBox(
-                      height: 64,
-                    ),
-                    PrimaryActionButton(
-                      onPress: () => {
-                        Navigator.pushNamed(context, '/convert-coin-to-vpkr')
-                      },
-                      text: 'Convert to vPKR',
-                    ),
-                  ],
-                ),
-              ),
-            );
+            return buildCoinBottomDraggableBaseSheet(context);
           },
         ),
       },
@@ -186,6 +103,93 @@ class CoinCard extends StatelessWidget {
             horizontal: 10,
             vertical: 10,
           ),
+        ),
+      ),
+    );
+  }
+
+  BottomDraggableBaseSheet buildCoinBottomDraggableBaseSheet(
+      BuildContext context) {
+    return BottomDraggableBaseSheet(
+      child: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Row(
+              children: [
+                SvgPicture.asset(cryptoCurrency.logoAsset),
+                SizedBox(
+                  width: 14,
+                ),
+                Text(cryptoCurrency.shortName, style: tUpperTitle)
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Available ${cryptoCurrency.shortName}',
+                      style: tDraggableSheetFadedText,
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      cryptoCurrency.balance.toString(),
+                      style: tUpperTitle,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  width: 32,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Total Value in PKR',
+                      style: tDraggableSheetFadedText,
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      '${cryptoCurrency.balance! * cryptoCurrency.conversionRate}',
+                      style: tUpperTitle,
+                    ),
+                  ],
+                )
+              ],
+            ),
+            SizedBox(
+              height: 32,
+            ),
+            Text(
+              'Today\'s Conversion Rate',
+              style: tDraggableSheetFadedText,
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Text(
+              cryptoCurrency.conversionRate.toString(),
+              style: tUpperTitle,
+            ),
+            SizedBox(
+              height: 64,
+            ),
+            PrimaryActionButton(
+              onPress: () =>
+                  {Navigator.pushNamed(context, '/convert-coin-to-vpkr')},
+              text: 'Convert to vPKR',
+            ),
+          ],
         ),
       ),
     );
