@@ -61,6 +61,7 @@ class SecondaryActionButton extends StatelessWidget {
           SvgPicture.asset(
             iconAsset,
             width: 16,
+            color: Palette.darkBlue,
           ),
           SizedBox(width: 15),
           Text(

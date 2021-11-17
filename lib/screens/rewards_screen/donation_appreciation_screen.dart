@@ -9,11 +9,11 @@ class DonationAppreciationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Palette.darkBlue,
-      body: SafeArea(
-        child: GestureDetector(
-          onTap: () => Navigator.pushNamed(context, '/home'),
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, '/home'),
+      child: Scaffold(
+        backgroundColor: Palette.darkBlue,
+        body: SafeArea(
           child: Column(
             children: <Widget>[
               Padding(

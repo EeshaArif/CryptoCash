@@ -7,8 +7,8 @@ import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class VpkrPurchaseSuccessScreen extends StatelessWidget {
-  const VpkrPurchaseSuccessScreen({Key? key}) : super(key: key);
+class GetVpkrPurchaseSuccessScreen extends StatelessWidget {
+  const GetVpkrPurchaseSuccessScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

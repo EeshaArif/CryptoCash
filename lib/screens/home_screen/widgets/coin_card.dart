@@ -186,7 +186,7 @@ class CoinCard extends StatelessWidget {
             ),
             PrimaryActionButton(
               onPress: () =>
-                  {Navigator.pushNamed(context, '/convert-coin-to-vpkr')},
+                  {Navigator.pushNamed(context, '/get-vpkr-convert-coins')},
               text: 'Convert to vPKR',
             ),
           ],

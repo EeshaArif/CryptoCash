@@ -20,66 +20,82 @@ class DonationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RawMaterialButton(
-      onPressed: () => {
-        showModalBottomSheet(
-          clipBehavior: Clip.none,
-          backgroundColor: Colors.transparent,
-          context: context,
-          isScrollControlled: true,
-          builder: (_) {
-            return DonationInfoSheet(
-              points: points,
-              onRedeem: onRedeem,
-              title: text,
-              svgAsset: svgAsset,
-              info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
-                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
-                  'quis tortor dolor parturient pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
-                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
-                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
-                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
-                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
-                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
-                  'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices quis tortor dolor parturient pellentesque.',
-            );
-          },
+    return Stack(
+      children: [
+        Container(
+          width: 168,
+          height: 112,
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.all(
+              Radius.circular(8),
+            ),
+          ),
+          child: SvgPicture.asset(
+            'assets/donations/svector.svg',
+          ),
         ),
-      },
-      child: Stack(
-        children: [
-          Container(
+        Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              SvgPicture.asset('assets/donations/$svgAsset'),
+              Text(
+                text,
+                style: Theme.of(context).textTheme.headline6?.copyWith(
+                      fontSize: 20,
+                    ),
+              ),
+              SizedBox(height: 6),
+              DonationPointsCard(points: points),
+            ],
+          ),
+        ),
+        RawMaterialButton(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(8),
+            ),
+          ),
+          onPressed: () => {
+            showModalBottomSheet(
+              clipBehavior: Clip.none,
+              backgroundColor: Colors.transparent,
+              context: context,
+              isScrollControlled: true,
+              builder: (_) {
+                return DonationInfoSheet(
+                  points: points,
+                  onRedeem: onRedeem,
+                  title: text,
+                  svgAsset: svgAsset,
+                  info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
+                      'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                      'quis tortor dolor parturient pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
+                      'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                      'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                      'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                      'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                      'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
+                      'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices quis tortor dolor parturient pellentesque.',
+                );
+              },
+            ),
+          },
+          child: Container(
             width: 168,
             height: 112,
             decoration: BoxDecoration(
-              color: color,
+              color: Colors.transparent,
               borderRadius: BorderRadius.all(
                 Radius.circular(8),
               ),
             ),
-            child: SvgPicture.asset(
-              'assets/donations/svector.svg',
-            ),
+            child: SizedBox(),
           ),
-          Padding(
-            padding: const EdgeInsets.all(12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                SvgPicture.asset('assets/donations/$svgAsset'),
-                Text(
-                  text,
-                  style: Theme.of(context).textTheme.headline6?.copyWith(
-                        fontSize: 20,
-                      ),
-                ),
-                SizedBox(height: 6),
-                DonationPointsCard(points: points),
-              ],
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

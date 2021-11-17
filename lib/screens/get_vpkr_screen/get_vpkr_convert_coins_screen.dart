@@ -9,15 +9,15 @@ import 'package:cryptocash/styles.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ConvertCoinToVpkrScreen extends StatefulWidget {
-  const ConvertCoinToVpkrScreen({Key? key}) : super(key: key);
+class GetVpkrConvertCoinsScreen extends StatefulWidget {
+  const GetVpkrConvertCoinsScreen({Key? key}) : super(key: key);
 
   @override
-  _ConvertCoinToVpkrScreenState createState() =>
-      _ConvertCoinToVpkrScreenState();
+  _GetVpkrConvertCoinsScreenState createState() =>
+      _GetVpkrConvertCoinsScreenState();
 }
 
-class _ConvertCoinToVpkrScreenState extends State<ConvertCoinToVpkrScreen> {
+class _GetVpkrConvertCoinsScreenState extends State<GetVpkrConvertCoinsScreen> {
   String selectedCurrency = 'BTC';
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,8 @@ class _ConvertCoinToVpkrScreenState extends State<ConvertCoinToVpkrScreen> {
           Padding(
             padding:
                 const EdgeInsets.only(left: 16, right: 32, top: 18, bottom: 16),
-            child: TopBackButton(onPress: () => {}, text: 'Buy vPKR'),
+            child:
+                TopBackButton(onPress: () => {}, text: 'Convert Coins to vPKR'),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.0),
@@ -125,7 +126,7 @@ class _ConvertCoinToVpkrScreenState extends State<ConvertCoinToVpkrScreen> {
                 PrimaryActionButton(
                   onPress: () => Navigator.pushNamed(
                     context,
-                    '/vpkr-purchase-success',
+                    '/get-vpkr-purchase-success',
                   ),
                   text: 'Continue to Payment',
                 ),

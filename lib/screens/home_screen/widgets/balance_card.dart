@@ -53,11 +53,11 @@ class BalanceCard extends StatelessWidget {
                 ),
                 elevation: MaterialStateProperty.all(0)),
             onPressed: () =>
-                Navigator.pushNamed(context, '/convert-coin-to-vpkr'),
+                Navigator.pushNamed(context, '/get-vpkr-payment-option'),
             child: Container(
               width: _size.width,
               child: Text(
-                'Buy vPKR',
+                'Get vPKR',
                 style: Theme.of(context).textTheme.button,
               ).center().pad(
                     padding: EdgeInsets.symmetric(
