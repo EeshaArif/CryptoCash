@@ -5,7 +5,6 @@ import 'package:cryptocash/screens/common/expanded_base.dart';
 import 'package:cryptocash/screens/common/transaction_info_group.dart';
 import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
 
 class GetVpkrLoadSuccessScreen extends StatelessWidget {
@@ -61,7 +60,7 @@ class GetVpkrLoadSuccessScreen extends StatelessWidget {
                                       'Sent by',
                                       style:
                                           Styles.tPurpleTileBoldText.copyWith(
-                                        color: Colors.white.withOpacity(0.8),
+                                        color: Colors.white,
                                       ),
                                     ),
                                     SizedBox(
@@ -69,8 +68,11 @@ class GetVpkrLoadSuccessScreen extends StatelessWidget {
                                     ),
                                     PurpleTileContainer(
                                       child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
                                         children: <Widget>[
-                                          CircleAvatar(
+                                          // TODO: Add the following commented code in business side
+                                          /* CircleAvatar(
                                             child: SvgPicture.asset(
                                               'assets/logo.svg',
                                             ),
@@ -90,7 +92,13 @@ class GetVpkrLoadSuccessScreen extends StatelessWidget {
                                                 style: Styles.tPurpleTileText,
                                               ),
                                             ],
-                                          ),
+                                          ), */
+                                          Text('CPC c3 Service',
+                                              style:
+                                                  Styles.tPurpleTileBoldText),
+                                          Text('M33487',
+                                              style:
+                                                  Styles.tPurpleTileBoldText),
                                         ],
                                       ),
                                     ),
