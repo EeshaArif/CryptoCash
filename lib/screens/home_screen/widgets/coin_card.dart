@@ -18,6 +18,11 @@ class CoinCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(12),
+        ),
+      ),
       onPressed: () => {
         showModalBottomSheet(
           clipBehavior: Clip.none,

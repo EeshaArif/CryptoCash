@@ -75,9 +75,6 @@ class DonationCard extends StatelessWidget {
                       'quis tortor dolor parturient pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
                       'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
                       'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
-                      'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
-                      'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
-                      'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices ' +
                       'Vel euismod elit aliquam interdum morbi. Orci, dolor ultrices quis tortor dolor parturient pellentesque.',
                 );
               },
