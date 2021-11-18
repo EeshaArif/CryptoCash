@@ -29,14 +29,14 @@ class GetVpkrPurchaseSuccessScreen extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'Purchase Successful',
-                          style: tUpperTitle,
+                          style: Styles.tUpperTitle,
                         ),
                         SizedBox(
                           height: 12,
                         ),
                         Text(
                           'Your vPKR Token have been added to your cryptocash wallet.',
-                          style: tUpperBodyText,
+                          style: Styles.tUpperBodyText,
                         ),
                       ],
                     ),
@@ -62,10 +62,10 @@ class GetVpkrPurchaseSuccessScreen extends StatelessWidget {
                                         children: <Widget>[
                                           Text(
                                             'VPKR',
-                                            style: tPurpleTileText1,
+                                            style: Styles.tPurpleTileText1,
                                           ),
                                           Text('${66774732.0}',
-                                              style: tPurpleTileText1)
+                                              style: Styles.tPurpleTileText1)
                                         ],
                                       ),
                                     ),

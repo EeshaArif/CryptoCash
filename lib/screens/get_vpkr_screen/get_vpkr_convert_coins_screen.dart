@@ -4,8 +4,7 @@ import 'package:cryptocash/screens/common/themed_buttons.dart'
 import 'package:cryptocash/screens/common/themed_fields.dart'
     show AmountFormField;
 import 'package:cryptocash/screens/common/expanded_base.dart';
-import 'package:cryptocash/styles.dart'
-    show tNumberTextTitle, tNumberTitle, tUpperAvailable, tUpperConversionRate;
+import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -46,7 +45,7 @@ class _GetVpkrConvertCoinsScreenState extends State<GetVpkrConvertCoinsScreen> {
                       'assets/dropdown.svg',
                     ),
                     focusColor: Colors.white,
-                    style: tNumberTextTitle,
+                    style: Styles.tNumberTextTitle,
                     value: selectedCurrency,
                     onChanged: (value) => {
                       setState(
@@ -76,7 +75,7 @@ class _GetVpkrConvertCoinsScreenState extends State<GetVpkrConvertCoinsScreen> {
                   child: Center(
                     child: Text(
                       '01 $selectedCurrency = 000.23 vPKR',
-                      style: tUpperConversionRate,
+                      style: Styles.tUpperConversionRate,
                     ),
                   ),
                 )
@@ -89,7 +88,7 @@ class _GetVpkrConvertCoinsScreenState extends State<GetVpkrConvertCoinsScreen> {
           ),
           Text(
             'Available $selectedCurrency: ${67}',
-            style: tUpperAvailable,
+            style: Styles.tUpperAvailable,
           ),
           SizedBox(height: 18),
         ],
@@ -100,7 +99,7 @@ class _GetVpkrConvertCoinsScreenState extends State<GetVpkrConvertCoinsScreen> {
           SizedBox(height: 24),
           Text(
             'You will get',
-            style: tNumberTextTitle,
+            style: Styles.tNumberTextTitle,
           ),
           SizedBox(height: 18),
           Row(
@@ -110,11 +109,11 @@ class _GetVpkrConvertCoinsScreenState extends State<GetVpkrConvertCoinsScreen> {
             children: [
               Text(
                 '${23000.00}',
-                style: tNumberTitle,
+                style: Styles.tNumberTitle,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 12.0),
-                child: Text('vPKR', style: tNumberTextTitle),
+                child: Text('vPKR', style: Styles.tNumberTextTitle),
               )
             ],
           ),

@@ -1,4 +1,3 @@
-import 'package:cryptocash/palette.dart';
 import 'package:cryptocash/screens/common/bottom_draggable_base_sheet.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart'
     show PrimaryActionButton;
@@ -34,7 +33,7 @@ class DonationInfoSheet extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('$title for good', style: tUpperTitle),
+                Text('$title for good', style: Styles.tUpperTitle),
                 DonationPointsCard(points: points),
               ],
             ),
@@ -43,7 +42,7 @@ class DonationInfoSheet extends StatelessWidget {
             ),
             Text(
               '$info',
-              style: tUpperBodyText,
+              style: Styles.tUpperBodyText,
             ),
             SizedBox(
               height: 24,

@@ -45,7 +45,7 @@ class DonationAppreciationScreen extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Text('THANKYOU!', style: tNumberTitle),
+                      Text('THANKYOU!', style: Styles.tNumberTitle),
                       Text(
                         'for making an impact',
                         style: Theme.of(context).textTheme.headline6?.copyWith(

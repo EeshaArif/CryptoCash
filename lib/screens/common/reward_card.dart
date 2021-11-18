@@ -23,12 +23,12 @@ class RewardCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(cardSubtitle, style: tRewardsCardSubtitle),
+              Text(cardSubtitle, style: Styles.tRewardsCardSubtitle),
               SizedBox(
                 height: 12,
               ),
-              Text('$cardTitle $points CP', style: tRewardsCardTitle),
-              Text('for this transaction', style: tRewardsCardText),
+              Text('$cardTitle $points CP', style: Styles.tRewardsCardTitle),
+              Text('for this transaction', style: Styles.tRewardsCardText),
             ],
           ),
           SvgPicture.asset(

@@ -3,8 +3,7 @@ import 'package:cryptocash/screens/common/themed_buttons.dart'
 import 'package:cryptocash/screens/common/themed_fields.dart'
     show AmountFormField;
 import 'package:cryptocash/screens/common/expanded_base.dart';
-import 'package:cryptocash/styles.dart'
-    show tNumberTextTitle, tNumberTitle, tUpperAvailable, tUpperConversionRate;
+import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
 
 class ConvertPointToVpkrScreen extends StatefulWidget {
@@ -35,11 +34,11 @@ class _ConvertPointToVpkrScreenState extends State<ConvertPointToVpkrScreen> {
               children: [
                 Text(
                   'Your Points',
-                  style: tNumberTextTitle,
+                  style: Styles.tNumberTextTitle,
                 ),
                 Text(
                   '01 PKR = 000.23 vPKR',
-                  style: tUpperConversionRate,
+                  style: Styles.tUpperConversionRate,
                 )
               ],
             ),
@@ -50,7 +49,7 @@ class _ConvertPointToVpkrScreenState extends State<ConvertPointToVpkrScreen> {
           ),
           Text(
             'Available Points: ${9867}',
-            style: tUpperAvailable,
+            style: Styles.tUpperAvailable,
           ),
           SizedBox(height: 18),
         ],
@@ -61,7 +60,7 @@ class _ConvertPointToVpkrScreenState extends State<ConvertPointToVpkrScreen> {
           SizedBox(height: 24),
           Text(
             'You will get',
-            style: tNumberTextTitle,
+            style: Styles.tNumberTextTitle,
           ),
           SizedBox(height: 18),
           Row(
@@ -71,11 +70,11 @@ class _ConvertPointToVpkrScreenState extends State<ConvertPointToVpkrScreen> {
             children: [
               Text(
                 '${23000.00}',
-                style: tNumberTitle,
+                style: Styles.tNumberTitle,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 12.0),
-                child: Text('vPKR', style: tNumberTextTitle),
+                child: Text('vPKR', style: Styles.tNumberTextTitle),
               )
             ],
           ),

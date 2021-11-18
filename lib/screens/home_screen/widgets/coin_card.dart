@@ -122,7 +122,7 @@ class CoinCard extends StatelessWidget {
                 SizedBox(
                   width: 14,
                 ),
-                Text(cryptoCurrency.shortName, style: tUpperTitle)
+                Text(cryptoCurrency.shortName, style: Styles.tUpperTitle)
               ],
             ),
             SizedBox(
@@ -135,14 +135,14 @@ class CoinCard extends StatelessWidget {
                   children: [
                     Text(
                       'Available ${cryptoCurrency.shortName}',
-                      style: tDraggableSheetFadedText,
+                      style: Styles.tDraggableSheetFadedText,
                     ),
                     SizedBox(
                       height: 8,
                     ),
                     Text(
                       cryptoCurrency.balance.toString(),
-                      style: tUpperTitle,
+                      style: Styles.tUpperTitle,
                     ),
                   ],
                 ),
@@ -154,14 +154,14 @@ class CoinCard extends StatelessWidget {
                   children: [
                     Text(
                       'Total Value in PKR',
-                      style: tDraggableSheetFadedText,
+                      style: Styles.tDraggableSheetFadedText,
                     ),
                     SizedBox(
                       height: 8,
                     ),
                     Text(
                       '${cryptoCurrency.balance! * cryptoCurrency.conversionRate}',
-                      style: tUpperTitle,
+                      style: Styles.tUpperTitle,
                     ),
                   ],
                 )
@@ -172,14 +172,14 @@ class CoinCard extends StatelessWidget {
             ),
             Text(
               'Today\'s Conversion Rate',
-              style: tDraggableSheetFadedText,
+              style: Styles.tDraggableSheetFadedText,
             ),
             SizedBox(
               height: 8,
             ),
             Text(
               cryptoCurrency.conversionRate.toString(),
-              style: tUpperTitle,
+              style: Styles.tUpperTitle,
             ),
             SizedBox(
               height: 64,

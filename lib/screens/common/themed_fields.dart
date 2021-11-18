@@ -126,7 +126,7 @@ class AmountFormField extends StatelessWidget {
       textAlign: TextAlign.center,
       cursorColor: Colors.white,
       // 100000.00.toString(),
-      style: tNumberTitle,
+      style: Styles.tNumberTitle,
     );
   }
 }
