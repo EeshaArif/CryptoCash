@@ -2,9 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Styles {
-  static final TextStyle tPurpleTileText1 = GoogleFonts.exo2(
+  static final TextStyle tPurpleTileBoldText = GoogleFonts.exo2(
     fontSize: 18,
     fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
+  static final TextStyle tPurpleTileText = GoogleFonts.exo2(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: Colors.white,
+  );
+  static final TextStyle tPurpleSheetDateTimeText = GoogleFonts.exo(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
     color: Colors.white,
   );
   static final TextStyle tPurpleSheetFadedText = GoogleFonts.exo(
@@ -15,6 +25,11 @@ class Styles {
   static final TextStyle tPurpleSheetBoldText = GoogleFonts.exo2(
     fontSize: 18,
     fontWeight: FontWeight.w700,
+    color: Colors.white,
+  );
+  static final TextStyle tPurpleSheetLargeBoldText = GoogleFonts.exo2(
+    fontSize: 30,
+    fontWeight: FontWeight.w600,
     color: Colors.white,
   );
   static final TextStyle tDraggableSheetFadedText = GoogleFonts.exo(

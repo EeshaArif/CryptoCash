@@ -34,7 +34,7 @@ class CpTransactionCard extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     '$transactionText',
-                    style: Styles.tPurpleTileText1,
+                    style: Styles.tPurpleTileBoldText,
                   ),
                   Text(
                     '$transactionDate at $transactionTime',

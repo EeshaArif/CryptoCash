@@ -48,9 +48,10 @@ class CpConvertSuccessScreen extends StatelessWidget {
                         children: <Widget>[
                           Text(
                             'VPKR',
-                            style: Styles.tPurpleTileText1,
+                            style: Styles.tPurpleTileBoldText,
                           ),
-                          Text('${66774732.0}', style: Styles.tPurpleTileText1)
+                          Text('${66774732.0}',
+                              style: Styles.tPurpleTileBoldText)
                         ],
                       ),
                     ),

@@ -58,7 +58,8 @@ class HomeScreen extends StatelessWidget {
                           child: IconButton(
                             padding: EdgeInsets.zero,
                             constraints: BoxConstraints(),
-                            onPressed: () {},
+                            onPressed: () =>
+                                Navigator.pushNamed(context, '/rewards'),
                             iconSize: 40,
                             icon: Icon(
                               Icons.arrow_right_rounded,
