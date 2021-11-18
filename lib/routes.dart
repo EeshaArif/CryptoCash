@@ -11,6 +11,7 @@ import 'package:cryptocash/screens/auth_screen/resetpass_screen.dart';
 import 'package:cryptocash/screens/auth_screen/settranspass_screen.dart';
 import 'package:cryptocash/screens/auth_screen/usecase_screen.dart';
 import 'package:cryptocash/screens/get_vpkr_screen/get_vpkr_convert_coins_screen.dart';
+import 'package:cryptocash/screens/get_vpkr_screen/get_vpkr_merchant_load_screen.dart';
 import 'package:cryptocash/screens/get_vpkr_screen/get_vpkr_payment_option_screen.dart';
 import 'package:cryptocash/screens/get_vpkr_screen/get_vpkr_purchase_success_screen.dart';
 import 'package:cryptocash/screens/home_screen/home_screen.dart';
@@ -109,7 +110,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => GetVpkrPurchaseSuccessScreen(),
         );
-
+      case '/get-vpkr-merchant-load':
+        return MaterialPageRoute(
+          builder: (context) => GetVpkrMerchantLoadScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

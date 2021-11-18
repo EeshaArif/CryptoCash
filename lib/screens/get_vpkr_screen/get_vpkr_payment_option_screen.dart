@@ -66,26 +66,13 @@ class _GetVpkrPaymentOptionScreenState
                           fit: BoxFit.contain,
                           width: 200,
                           height: 200,
-                        ),
-                      ),
-                      Container(
-                        height: 128,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              colors: [
-                                Colors.black.withOpacity(0.7),
-                                Colors.black.withOpacity(0.4)
-                              ]),
-                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.white.withOpacity(0.2),
                         ),
                       ),
                       Text(
                         'Convert Crypto',
                         style: Styles.tRewardsCardSubtitle.copyWith(
                           fontSize: 16,
-                          color: Color(0xFFE7E7E7),
                         ),
                       ),
                     ],
@@ -103,44 +90,30 @@ class _GetVpkrPaymentOptionScreenState
                     ),
                   ),
                   onPressed: () => {
-                    // Navigator.pushNamed(context, '/get-vpkr-merchant-load'),
+                    Navigator.pushNamed(context, '/get-vpkr-merchant-load'),
                   },
                   child: Stack(
                     alignment: AlignmentDirectional.center,
                     children: [
                       Container(
+                        width: double.infinity,
                         height: 128,
                         padding: EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: Palette.darkOrange,
+                          color: Palette.darkOrange.withOpacity(0.7),
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                       SvgPicture.asset(
                         'assets/qr.svg',
-                        fit: BoxFit.contain,
                         width: 64,
                         height: 64,
-                      ),
-                      Container(
-                        height: 128,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [
-                              Colors.black.withOpacity(0.7),
-                              Colors.black.withOpacity(0.5)
-                            ],
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
+                        color: Colors.white.withOpacity(0.2),
                       ),
                       Text(
                         'Merchant Load',
                         style: Styles.tRewardsCardSubtitle.copyWith(
                           fontSize: 16,
-                          color: Color(0xFFE7E7E7),
                         ),
                       ),
                     ],
@@ -204,20 +177,6 @@ class _GetVpkrPaymentOptionScreenState
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Palette.coinCardStartGradient,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                Container(
-                  height: 64,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [
-                          Colors.black.withOpacity(0.45),
-                          Colors.black.withOpacity(0.2)
-                        ]),
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),

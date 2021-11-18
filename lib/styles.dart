@@ -7,6 +7,16 @@ class Styles {
     fontWeight: FontWeight.w600,
     color: Colors.white,
   );
+  static final TextStyle tPurpleSheetFadedText = GoogleFonts.exo(
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+    color: Colors.white.withOpacity(0.8),
+  );
+  static final TextStyle tPurpleSheetBoldText = GoogleFonts.exo2(
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+    color: Colors.white,
+  );
   static final TextStyle tDraggableSheetFadedText = GoogleFonts.exo(
     fontSize: 14,
     fontWeight: FontWeight.w400,
