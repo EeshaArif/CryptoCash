@@ -1,9 +1,9 @@
 import 'package:cryptocash/constants.dart';
 import 'package:cryptocash/palette.dart';
 import 'package:cryptocash/screens/common/expanded_base.dart';
-import 'package:cryptocash/screens/common/purple_tile.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart';
 import 'package:cryptocash/screens/common/themed_fields.dart';
+import 'package:cryptocash/screens/common/trans_pass_bottom_draggable_sheet.dart';
 import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -120,7 +120,20 @@ class _StoreConnectedScreenState extends State<StoreConnectedScreen> {
           SizedBox(
             height: 24,
           ),
-          PrimaryActionButton(onPress: () => {}, text: 'Pay Now'),
+          PrimaryActionButton(
+              onPress: () => {
+                    showModalBottomSheet(
+                      clipBehavior: Clip.none,
+                      backgroundColor: Colors.transparent,
+                      context: context,
+                      isScrollControlled: true,
+                      builder: (_) {
+                        return buildTransactionPassBottomDraggableBaseSheet(
+                            context);
+                      },
+                    ),
+                  },
+              text: 'Pay Now'),
           SizedBox(
             height: 16,
           ),
@@ -150,6 +163,18 @@ class _StoreConnectedScreenState extends State<StoreConnectedScreen> {
         ],
       ),
       value: cryptoCurrency,
+    );
+  }
+
+  TransPassBottomDraggableSheet buildTransactionPassBottomDraggableBaseSheet(
+      BuildContext context) {
+    return TransPassBottomDraggableSheet(
+      onConfirm: () => {
+        Navigator.pushNamed(
+          context,
+          '/transaction-successful',
+        ),
+      },
     );
   }
 }

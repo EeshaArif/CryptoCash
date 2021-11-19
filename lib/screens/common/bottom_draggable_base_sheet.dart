@@ -44,6 +44,7 @@ class BottomDraggableBaseSheet extends StatelessWidget {
                 color: Palette.darkPurple,
               ),
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   SizedBox(
                     height: 16,

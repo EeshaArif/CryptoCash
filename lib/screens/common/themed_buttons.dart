@@ -1,4 +1,5 @@
 import 'package:cryptocash/palette.dart';
+import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -103,6 +104,27 @@ class PrimaryTextButton extends StatelessWidget {
         text,
         style: Theme.of(context).textTheme.subtitle1?.copyWith(
             fontWeight: FontWeight.w400, color: Colors.white.withOpacity(0.8)),
+      ),
+    );
+  }
+}
+
+class SecondaryTextButton extends StatelessWidget {
+  final void Function() onPress;
+  final String text;
+  const SecondaryTextButton({
+    Key? key,
+    required this.onPress,
+    required this.text,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: onPress,
+      child: Text(
+        text,
+        style: Styles.tDraggableSheetFadedSharpText,
       ),
     );
   }

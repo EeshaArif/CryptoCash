@@ -52,10 +52,20 @@ class Styles {
     fontWeight: FontWeight.w400,
     color: Colors.white,
   );
+  static final TextStyle tDraggableSheetTitle = GoogleFonts.exo2(
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
   static final TextStyle tDraggableSheetFadedText = GoogleFonts.exo(
     fontSize: 14,
     fontWeight: FontWeight.w400,
     color: Colors.white.withOpacity(0.72),
+  );
+  static final TextStyle tDraggableSheetFadedSharpText = GoogleFonts.exo2(
+    fontSize: 15,
+    fontWeight: FontWeight.w300,
+    color: Colors.white.withOpacity(0.5),
   );
   static final TextStyle tUpperTitle = GoogleFonts.exo2(
     fontSize: 24,
