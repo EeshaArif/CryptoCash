@@ -6,19 +6,19 @@ import 'package:cryptocash/screens/common/themed_fields.dart'
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ResetPassScreen extends StatefulWidget {
-  const ResetPassScreen({Key? key}) : super(key: key);
+class ResetTransPassScreen extends StatefulWidget {
+  const ResetTransPassScreen({Key? key}) : super(key: key);
 
   @override
-  _ResetPassScreenState createState() => _ResetPassScreenState();
+  _ResetTransPassScreenState createState() => _ResetTransPassScreenState();
 }
 
-class _ResetPassScreenState extends State<ResetPassScreen> {
+class _ResetTransPassScreenState extends State<ResetTransPassScreen> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return AuthBase(
-      headerText: 'Reset your Password',
+      headerText: 'Reset Your Transaction Password',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,7 +29,7 @@ class _ResetPassScreenState extends State<ResetPassScreen> {
               SizedBox(
                 height: 32,
               ),
-              Text('Set New Password',
+              Text('Set New Transaction Password',
                   style: Theme.of(context).textTheme.headline3),
               SizedBox(
                 height: 32,
@@ -38,7 +38,7 @@ class _ResetPassScreenState extends State<ResetPassScreen> {
                 key: _formKey,
                 child: Column(
                   children: [
-                    AuthPassFormField(label: 'Enter new Password'),
+                    AuthPassFormField(label: 'Enter new Transaction Password'),
                     SizedBox(height: 12),
                     AuthPassFormField(label: 'Confirm Password'),
                     SizedBox(height: 12),

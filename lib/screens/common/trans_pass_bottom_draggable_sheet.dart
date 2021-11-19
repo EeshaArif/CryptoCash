@@ -88,7 +88,7 @@ class TransPassBottomDraggableSheet extends StatelessWidget {
                               SecondaryTextButton(
                                 onPress: () => {
                                   Navigator.pushNamed(
-                                      context, '/forgot-trans-pass-verify'),
+                                      context, '/reset-trans-pass-verify'),
                                 },
                                 text: 'Forgot Password?',
                               ),

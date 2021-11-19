@@ -3,22 +3,24 @@ import 'package:cryptocash/screens/auth_screen/widgets/identity_verification_she
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ForgotPassVerifyScreen extends StatefulWidget {
-  const ForgotPassVerifyScreen({Key? key}) : super(key: key);
+class ResetTransPassVerifyScreen extends StatefulWidget {
+  const ResetTransPassVerifyScreen({Key? key}) : super(key: key);
 
   @override
-  _ForgotPassVerifyScreenState createState() => _ForgotPassVerifyScreenState();
+  _ResetTransPassVerifyScreenState createState() =>
+      _ResetTransPassVerifyScreenState();
 }
 
-class _ForgotPassVerifyScreenState extends State<ForgotPassVerifyScreen> {
+class _ResetTransPassVerifyScreenState
+    extends State<ResetTransPassVerifyScreen> {
   @override
   Widget build(BuildContext context) {
     return AuthBase(
-      headerText: 'Reset your Password.',
+      headerText: 'Reset Your Transaction Password',
       child: IdentityVerificationSheet(
         onComplete: (pin) {},
         onResend: () {},
-        onVerify: () => Navigator.pushNamed(context, '/reset-pass'),
+        onVerify: () => Navigator.pushNamed(context, '/reset-trans-pass'),
       ),
     );
   }

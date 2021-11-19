@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     AuthPassFormField(label: 'Enter Password'),
                     TextButton(
                       onPressed: () =>
-                          Navigator.pushNamed(context, '/forgot-pass-verify'),
+                          Navigator.pushNamed(context, '/reset-pass-verify'),
                       child: Text(
                         'forgot password?',
                         style: Theme.of(context).textTheme.bodyText1?.copyWith(

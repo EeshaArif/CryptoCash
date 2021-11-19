@@ -2,7 +2,7 @@ import 'package:cryptocash/screens/auth_screen/boarding_screen.dart';
 import 'package:cryptocash/screens/auth_screen/business_signup_screen/business_setpass_screen.dart';
 import 'package:cryptocash/screens/auth_screen/business_signup_screen/business_signup_screen.dart';
 import 'package:cryptocash/screens/auth_screen/business_signup_screen/business_verify_screen.dart';
-import 'package:cryptocash/screens/auth_screen/forgotpassverify_screen.dart';
+import 'package:cryptocash/screens/auth_screen/reset_pass_verify_screen.dart';
 import 'package:cryptocash/screens/auth_screen/login_screen/login_screen.dart';
 import 'package:cryptocash/screens/auth_screen/login_screen/loginverify_screen.dart';
 import 'package:cryptocash/screens/auth_screen/personal_signup_screen/personal_setpass_screen.dart';
@@ -17,6 +17,8 @@ import 'package:cryptocash/screens/get_vpkr_screen/merchant_load_screen/get_vpkr
 import 'package:cryptocash/screens/get_vpkr_screen/get_vpkr_payment_option_screen.dart';
 import 'package:cryptocash/screens/get_vpkr_screen/convert_coins_screen/get_vpkr_purchase_success_screen.dart';
 import 'package:cryptocash/screens/home_screen/home_screen.dart';
+import 'package:cryptocash/screens/reset_trans_pass_screen/reset_trans_pass_screen.dart';
+import 'package:cryptocash/screens/reset_trans_pass_screen/reset_trans_pass_verify_screen.dart';
 import 'package:cryptocash/screens/rewards_screen/convert_point_to_vpkr_screen.dart';
 import 'package:cryptocash/screens/rewards_screen/cp_convert_success_screen.dart';
 import 'package:cryptocash/screens/rewards_screen/donation_appreciation_screen.dart';
@@ -71,9 +73,9 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => PersonalVerifyScreen(),
         );
-      case '/forgot-pass-verify':
+      case '/reset-pass-verify':
         return MaterialPageRoute(
-          builder: (context) => ForgotPassVerifyScreen(),
+          builder: (context) => ResetPassVerifyScreen(),
         );
       case '/reset-pass':
         return MaterialPageRoute(
@@ -82,6 +84,14 @@ class AppRouter {
       case '/set-trans-pass':
         return MaterialPageRoute(
           builder: (context) => SetTransPassScreen(),
+        );
+      case '/reset-trans-pass-verify':
+        return MaterialPageRoute(
+          builder: (context) => ResetTransPassVerifyScreen(),
+        );
+      case '/reset-trans-pass':
+        return MaterialPageRoute(
+          builder: (context) => ResetTransPassScreen(),
         );
       case '/home':
         return MaterialPageRoute(
