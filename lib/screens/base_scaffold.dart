@@ -1,7 +1,5 @@
-import 'package:cryptocash/extensions.dart';
 import 'package:cryptocash/palette.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class BaseScaffold extends StatelessWidget {
   final Widget? body;

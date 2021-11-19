@@ -1,6 +1,3 @@
-import 'dart:math';
-
-import 'package:cryptocash/extensions.dart';
 import 'package:cryptocash/screens/common/reward_card.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart';
 import 'package:cryptocash/screens/common/expanded_base.dart';

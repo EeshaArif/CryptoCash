@@ -1,5 +1,4 @@
 import 'package:cryptocash/palette.dart';
-import 'package:cryptocash/screens/base_scaffold.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart'
     show CardActionButton, TopBackButton;
 import 'package:cryptocash/screens/rewards_screen/widgets/cp_transactions.dart';
