@@ -23,7 +23,7 @@ class _GetVpkrPaymentOptionScreenState
       upperChild: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          TopBackButtonWithPadding(onPress: () => {}, text: 'Payment Option'),
+          TopBackButtonWithPadding(text: 'Payment Option'),
           SizedBox(height: 18),
         ],
       ),

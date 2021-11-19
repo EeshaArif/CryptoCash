@@ -28,8 +28,7 @@ class _GetVpkrConvertCoinsScreenState extends State<GetVpkrConvertCoinsScreen> {
           Padding(
             padding:
                 const EdgeInsets.only(left: 16, right: 32, top: 18, bottom: 16),
-            child:
-                TopBackButton(onPress: () => {}, text: 'Convert Coins to vPKR'),
+            child: TopBackButton(text: 'Convert Coins to vPKR'),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.0),

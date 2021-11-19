@@ -27,7 +27,7 @@ class _RewardsScreenState extends State<RewardsScreen> {
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 32, top: 18),
-            child: TopBackButton(onPress: () => {}),
+            child: TopBackButton(),
           ),
           Container(
             padding: const EdgeInsets.only(

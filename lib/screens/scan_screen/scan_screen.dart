@@ -36,7 +36,7 @@ class _ScanScreenState extends State<ScanScreen> {
       heightRatio: 0.2,
       body: Column(
         children: [
-          TopBackButtonWithPadding(onPress: () => {}, text: 'Scan QR'),
+          TopBackButtonWithPadding(text: 'Scan QR'),
           Expanded(
             // TODO: Remove GestureDetector to move to store-connected screen after successful scan
             child: GestureDetector(

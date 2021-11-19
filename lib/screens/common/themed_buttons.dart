@@ -131,12 +131,12 @@ class SecondaryTextButton extends StatelessWidget {
 }
 
 class TopBackButton extends StatelessWidget {
-  final void Function() onPress;
+  final void Function()? onPress;
   final String? text;
   const TopBackButton({
     Key? key,
     this.text,
-    required this.onPress,
+    this.onPress,
   }) : super(key: key);
 
   @override
@@ -149,10 +149,7 @@ class TopBackButton extends StatelessWidget {
             overlayColor:
                 MaterialStateProperty.all(Palette.darkBlue.withOpacity(0.1)),
           ),
-          onPressed: () => {
-            Navigator.pop(context),
-            onPress.call(),
-          },
+          onPressed: onPress == null ? () => Navigator.pop(context) : onPress,
           child: Row(
             children: [
               SvgPicture.asset(
@@ -180,12 +177,12 @@ class TopBackButton extends StatelessWidget {
 }
 
 class TopBackButtonWithPadding extends StatelessWidget {
-  final void Function() onPress;
+  final void Function()? onPress;
   final String? text;
   const TopBackButtonWithPadding({
     Key? key,
     this.text,
-    required this.onPress,
+    this.onPress,
   }) : super(key: key);
 
   @override

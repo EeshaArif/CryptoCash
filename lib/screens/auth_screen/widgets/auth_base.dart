@@ -61,7 +61,7 @@ class AuthHeader extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 32),
-            child: TopBackButton(onPress: () => {}),
+            child: TopBackButton(),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 32),

@@ -25,7 +25,7 @@ class _ConvertPointToVpkrScreenState extends State<ConvertPointToVpkrScreen> {
             padding:
                 const EdgeInsets.only(left: 16, right: 32, top: 18, bottom: 16),
             child: TopBackButton(
-                onPress: () => {}, text: 'Convert points to vPKR'),
+                text: 'Convert points to vPKR'),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.0),

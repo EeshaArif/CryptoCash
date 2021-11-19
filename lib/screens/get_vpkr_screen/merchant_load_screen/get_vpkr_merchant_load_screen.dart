@@ -26,7 +26,7 @@ class GetVpkrMerchantLoadScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(
                   left: 16, right: 32, top: 18, bottom: 8),
-              child: TopBackButton(onPress: () => {}, text: 'Merchant Load'),
+              child: TopBackButton(text: 'Merchant Load'),
             ),
             SizedBox(height: 18),
           ],
