@@ -23,7 +23,9 @@ class GetVpkrLoadSuccessScreen extends StatelessWidget {
                 child: Column(children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 32.0, vertical: 24),
+                      horizontal: 32.0,
+                      vertical: 24,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[

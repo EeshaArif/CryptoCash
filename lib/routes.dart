@@ -6,6 +6,7 @@ import 'package:cryptocash/screens/auth_screen/forgotpassverify_screen.dart';
 import 'package:cryptocash/screens/auth_screen/login_screen/login_screen.dart';
 import 'package:cryptocash/screens/auth_screen/login_screen/loginverify_screen.dart';
 import 'package:cryptocash/screens/auth_screen/personal_signup_screen/personal_setpass_screen.dart';
+import 'package:cryptocash/screens/auth_screen/personal_signup_screen/personal_signup_screen.dart';
 import 'package:cryptocash/screens/auth_screen/personal_signup_screen/personal_verify_screen.dart';
 import 'package:cryptocash/screens/auth_screen/resetpass_screen.dart';
 import 'package:cryptocash/screens/auth_screen/settranspass_screen.dart';
@@ -57,7 +58,7 @@ class AppRouter {
         );
       case '/personal-signup':
         return MaterialPageRoute(
-          builder: (context) => BusinessSignupScreen(),
+          builder: (context) => PersonalSignupScreen(),
         );
       case '/personal-set-pass':
         return MaterialPageRoute(
