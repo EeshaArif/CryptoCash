@@ -4,6 +4,7 @@ import 'package:cryptocash/screens/common/themed_buttons.dart'
 import 'package:cryptocash/screens/common/themed_fields.dart'
     show AmountFormField;
 import 'package:cryptocash/screens/common/expanded_base.dart';
+import 'package:cryptocash/screens/common/trans_pass_bottom_draggable_sheet.dart';
 import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -123,10 +124,24 @@ class _GetVpkrConvertCoinsScreenState extends State<GetVpkrConvertCoinsScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 PrimaryActionButton(
-                  onPress: () => Navigator.pushNamed(
-                    context,
-                    '/get-vpkr-purchase-success',
-                  ),
+                  onPress: () => {
+                    showModalBottomSheet(
+                      clipBehavior: Clip.none,
+                      backgroundColor: Colors.transparent,
+                      context: context,
+                      isScrollControlled: true,
+                      builder: (_) {
+                        return TransPassBottomDraggableSheet(
+                          onConfirm: () => {
+                            Navigator.pushNamed(
+                              context,
+                              '/get-vpkr-purchase-success',
+                            ),
+                          },
+                        );
+                      },
+                    ),
+                  },
                   text: 'Continue to Payment',
                 ),
                 SizedBox(),

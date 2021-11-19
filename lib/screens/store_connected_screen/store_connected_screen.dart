@@ -121,19 +121,26 @@ class _StoreConnectedScreenState extends State<StoreConnectedScreen> {
             height: 24,
           ),
           PrimaryActionButton(
-              onPress: () => {
-                    showModalBottomSheet(
-                      clipBehavior: Clip.none,
-                      backgroundColor: Colors.transparent,
-                      context: context,
-                      isScrollControlled: true,
-                      builder: (_) {
-                        return buildTransactionPassBottomDraggableBaseSheet(
-                            context);
-                      },
-                    ),
-                  },
-              text: 'Pay Now'),
+            onPress: () => {
+              showModalBottomSheet(
+                clipBehavior: Clip.none,
+                backgroundColor: Colors.transparent,
+                context: context,
+                isScrollControlled: true,
+                builder: (_) {
+                  return TransPassBottomDraggableSheet(
+                    onConfirm: () => {
+                      Navigator.pushNamed(
+                        context,
+                        '/transaction-successful',
+                      ),
+                    },
+                  );
+                },
+              ),
+            },
+            text: 'Pay Now',
+          ),
           SizedBox(
             height: 16,
           ),
@@ -163,18 +170,6 @@ class _StoreConnectedScreenState extends State<StoreConnectedScreen> {
         ],
       ),
       value: cryptoCurrency,
-    );
-  }
-
-  TransPassBottomDraggableSheet buildTransactionPassBottomDraggableBaseSheet(
-      BuildContext context) {
-    return TransPassBottomDraggableSheet(
-      onConfirm: () => {
-        Navigator.pushNamed(
-          context,
-          '/transaction-successful',
-        ),
-      },
     );
   }
 }
