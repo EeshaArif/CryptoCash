@@ -26,7 +26,9 @@ class _RewardsScreenState extends State<RewardsScreen> {
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 32, top: 18),
-            child: TopBackButton(),
+            child: TopBackButton(
+              onPress: () => Navigator.pushNamed(context, '/home'),
+            ),
           ),
           Container(
             padding: const EdgeInsets.only(
