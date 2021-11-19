@@ -24,8 +24,7 @@ class _ConvertPointToVpkrScreenState extends State<ConvertPointToVpkrScreen> {
           Padding(
             padding:
                 const EdgeInsets.only(left: 16, right: 32, top: 18, bottom: 16),
-            child: TopBackButton(
-                text: 'Convert points to vPKR'),
+            child: TopBackButton(text: 'Convert points to vPKR'),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.0),
@@ -37,7 +36,7 @@ class _ConvertPointToVpkrScreenState extends State<ConvertPointToVpkrScreen> {
                   style: Styles.tNumberTextTitle,
                 ),
                 Text(
-                  '01 PKR = 000.23 vPKR',
+                  '01 CP = 000.23 vPKR',
                   style: Styles.tUpperConversionRate,
                 )
               ],
