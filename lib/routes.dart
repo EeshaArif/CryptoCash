@@ -21,6 +21,7 @@ import 'package:cryptocash/screens/rewards_screen/convert_point_to_vpkr_screen.d
 import 'package:cryptocash/screens/rewards_screen/cp_convert_success_screen.dart';
 import 'package:cryptocash/screens/rewards_screen/donation_appreciation_screen.dart';
 import 'package:cryptocash/screens/rewards_screen/rewards_screen.dart';
+import 'package:cryptocash/screens/scan_screen/scan_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -119,6 +120,10 @@ class AppRouter {
       case '/get-vpkr-load-success':
         return MaterialPageRoute(
           builder: (context) => GetVpkrLoadSuccessScreen(),
+        );
+      case '/scan':
+        return MaterialPageRoute(
+          builder: (context) => ScanScreen(),
         );
       default:
         return MaterialPageRoute(

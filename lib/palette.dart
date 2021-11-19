@@ -23,6 +23,8 @@ class Palette {
   static const cashIn = Color(0xFF2DF1C2);
   static const cashOut = Color(0xFFEC5555);
 
+  static const qrBorder = Color(0xFF2DF1C2);
+
   static MaterialColor createSwatch(Color color) {
     final swatchMap = {
       50: color.withOpacity(0.1),
