@@ -157,6 +157,24 @@ class TopBackButton extends StatelessWidget {
   }
 }
 
+class TopBackButtonWithPadding extends StatelessWidget {
+  final void Function() onPress;
+  final String? text;
+  const TopBackButtonWithPadding({
+    Key? key,
+    this.text,
+    required this.onPress,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 16, right: 32, top: 18, bottom: 8),
+      child: TopBackButton(onPress: onPress, text: text),
+    );
+  }
+}
+
 class CardActionButton extends StatelessWidget {
   final void Function() onPress;
   final String text;

@@ -17,6 +17,11 @@ class Styles {
     fontWeight: FontWeight.w400,
     color: Colors.white,
   );
+  static final TextStyle tPurpleSheetFormFieldText = GoogleFonts.exo(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: Colors.white.withOpacity(0.5),
+  );
   static final TextStyle tPurpleSheetFadedText = GoogleFonts.exo(
     fontSize: 15,
     fontWeight: FontWeight.w400,
@@ -27,9 +32,24 @@ class Styles {
     fontWeight: FontWeight.w700,
     color: Colors.white,
   );
+  static final TextStyle tPurpleSheetSmallBoldText = GoogleFonts.exo(
+    fontSize: 15,
+    fontWeight: FontWeight.w700,
+    color: Colors.white,
+  );
+  static final TextStyle tPurpleSheetLargeText = GoogleFonts.exo2(
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
   static final TextStyle tPurpleSheetLargeBoldText = GoogleFonts.exo2(
     fontSize: 30,
     fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
+  static final TextStyle tPurpleSheetSharpText = GoogleFonts.exo(
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
     color: Colors.white,
   );
   static final TextStyle tDraggableSheetFadedText = GoogleFonts.exo(

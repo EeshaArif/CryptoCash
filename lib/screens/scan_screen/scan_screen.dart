@@ -1,7 +1,8 @@
 import 'dart:io' show Platform;
 import 'package:cryptocash/palette.dart';
 import 'package:cryptocash/screens/base_scaffold.dart';
-import 'package:cryptocash/screens/common/themed_buttons.dart';
+import 'package:cryptocash/screens/common/themed_buttons.dart'
+    show TopBackButtonWithPadding;
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
@@ -35,11 +36,7 @@ class _ScanScreenState extends State<ScanScreen> {
       heightRatio: 0.2,
       body: Column(
         children: [
-          Padding(
-            padding:
-                const EdgeInsets.only(left: 16, right: 32, top: 18, bottom: 8),
-            child: TopBackButton(onPress: () => {}, text: 'Scan QR'),
-          ),
+          TopBackButtonWithPadding(onPress: () => {}, text: 'Scan QR'),
           Expanded(
             // TODO: Remove GestureDetector to move to store-connected screen after successful scan
             child: GestureDetector(
@@ -59,7 +56,7 @@ class _ScanScreenState extends State<ScanScreen> {
                     key: qrKey,
                     onQRViewCreated: _onQRViewCreated,
                     overlay: QrScannerOverlayShape(
-                        borderColor: Palette.cashIn, borderWidth: 10),
+                        borderColor: Palette.qrBorder, borderWidth: 10),
                   ),
                 ),
               ),

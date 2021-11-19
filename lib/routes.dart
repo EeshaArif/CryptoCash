@@ -22,6 +22,7 @@ import 'package:cryptocash/screens/rewards_screen/cp_convert_success_screen.dart
 import 'package:cryptocash/screens/rewards_screen/donation_appreciation_screen.dart';
 import 'package:cryptocash/screens/rewards_screen/rewards_screen.dart';
 import 'package:cryptocash/screens/scan_screen/scan_screen.dart';
+import 'package:cryptocash/screens/store_connected_screen/store_connected_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -124,6 +125,10 @@ class AppRouter {
       case '/scan':
         return MaterialPageRoute(
           builder: (context) => ScanScreen(),
+        );
+      case '/store-connected':
+        return MaterialPageRoute(
+          builder: (context) => StoreConnectedScreen(),
         );
       default:
         return MaterialPageRoute(

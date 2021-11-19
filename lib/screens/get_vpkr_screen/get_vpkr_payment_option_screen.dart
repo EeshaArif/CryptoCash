@@ -1,6 +1,6 @@
 import 'package:cryptocash/palette.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart'
-    show TopBackButton;
+    show TopBackButtonWithPadding;
 import 'package:cryptocash/screens/common/expanded_base.dart';
 import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
@@ -23,11 +23,7 @@ class _GetVpkrPaymentOptionScreenState
       upperChild: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(
-            padding:
-                const EdgeInsets.only(left: 16, right: 32, top: 18, bottom: 8),
-            child: TopBackButton(onPress: () => {}, text: 'Payment Option'),
-          ),
+          TopBackButtonWithPadding(onPress: () => {}, text: 'Payment Option'),
           SizedBox(height: 18),
         ],
       ),
