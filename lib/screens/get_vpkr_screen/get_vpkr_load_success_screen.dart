@@ -68,42 +68,7 @@ class GetVpkrLoadSuccessScreen extends StatelessWidget {
                                     SizedBox(
                                       height: 8,
                                     ),
-                                    PurpleTileContainer(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: <Widget>[
-                                          // TODO: Add the following commented code in business side
-                                          /* CircleAvatar(
-                                            child: SvgPicture.asset(
-                                              'assets/logo.svg',
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 16,
-                                          ),
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text('CPC C3 Service',
-                                                  style: Styles
-                                                      .tPurpleTileBoldText),
-                                              Text(
-                                                '+92 ${03546782736}',
-                                                style: Styles.tPurpleTileText,
-                                              ),
-                                            ],
-                                          ), */
-                                          Text('CPC c3 Service',
-                                              style:
-                                                  Styles.tPurpleTileBoldText),
-                                          Text('M33487',
-                                              style:
-                                                  Styles.tPurpleTileBoldText),
-                                        ],
-                                      ),
-                                    ),
+                                    MerchantPurpleContainer(),
                                     SizedBox(
                                       height: 24,
                                     ),
