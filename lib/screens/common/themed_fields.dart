@@ -108,8 +108,10 @@ class _AuthPassFormFieldState extends State<AuthPassFormField> {
 }
 
 class AmountFormField extends StatelessWidget {
+  final void Function(String value) onChanged;
   const AmountFormField({
     Key? key,
+    required this.onChanged,
   }) : super(key: key);
 
   @override
@@ -118,7 +120,9 @@ class AmountFormField extends StatelessWidget {
       keyboardType: TextInputType.numberWithOptions(decimal: true),
       autofocus: true,
       inputFormatters: [
-        FilteringTextInputFormatter.allow(RegExp(r'\d*\.?\d*')),
+        // Does not allow a decimal point on its own; ".", need to start with 0.
+        FilteringTextInputFormatter.allow(
+            RegExp(r"([0-9]+([.][0-9]*)?|[.][0-9]+)")),
       ],
       decoration: InputDecoration(
         enabledBorder: InputBorder.none,
@@ -126,8 +130,8 @@ class AmountFormField extends StatelessWidget {
       ),
       textAlign: TextAlign.center,
       cursorColor: Colors.white,
-      // 100000.00.toString(),
       style: Styles.tNumberTitle,
+      onChanged: onChanged,
     );
   }
 }

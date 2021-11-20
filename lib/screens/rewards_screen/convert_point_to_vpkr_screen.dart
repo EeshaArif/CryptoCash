@@ -15,9 +15,11 @@ class ConvertPointToVpkrScreen extends StatefulWidget {
 }
 
 class _ConvertPointToVpkrScreenState extends State<ConvertPointToVpkrScreen> {
+  double convertedAmount = 0;
   @override
   Widget build(BuildContext context) {
     return ExpandedBase(
+      isLowerChildScrollable: true,
       upperChild: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -36,7 +38,7 @@ class _ConvertPointToVpkrScreenState extends State<ConvertPointToVpkrScreen> {
                   style: Styles.tNumberTextTitle,
                 ),
                 Text(
-                  '01 CP = 000.23 vPKR',
+                  '01 CP = 0.23 vPKR',
                   style: Styles.tUpperConversionRate,
                 )
               ],
@@ -44,7 +46,17 @@ class _ConvertPointToVpkrScreenState extends State<ConvertPointToVpkrScreen> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.0),
-            child: AmountFormField(),
+            child: AmountFormField(
+              onChanged: (String value) {
+                setState(
+                  () {
+                    value.isNotEmpty
+                        ? convertedAmount = double.parse(value) * 0.23
+                        : convertedAmount = 0; //selectedCurrency.conversionRate
+                  },
+                );
+              },
+            ),
           ),
           Text(
             'Available Points: ${9867}',
@@ -62,36 +74,37 @@ class _ConvertPointToVpkrScreenState extends State<ConvertPointToVpkrScreen> {
             style: Styles.tNumberTextTitle,
           ),
           SizedBox(height: 18),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.baseline,
-            textBaseline: TextBaseline.alphabetic,
-            children: [
-              Text(
-                '${23000.00}',
-                style: Styles.tNumberTitle,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 12.0),
-                child: Text('vPKR', style: Styles.tNumberTextTitle),
-              )
-            ],
-          ),
-          SizedBox(height: 8),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                PrimaryActionButton(
-                  onPress: () => Navigator.pushNamed(
-                    context,
-                    '/cp-convert-success',
+          Center(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.baseline,
+                textBaseline: TextBaseline.alphabetic,
+                children: [
+                  Text(
+                    '${double.parse(
+                      convertedAmount.toStringAsFixed(4),
+                    )}',
+                    style: Styles.tNumberTitle,
                   ),
-                  text: 'Convert to vPKR',
-                ),
-                SizedBox(),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12.0),
+                    child: Text('vPKR', style: Styles.tNumberTextTitle),
+                  )
+                ],
+              ),
             ),
+          ),
+          SizedBox(
+            height: 32,
+          ),
+          PrimaryActionButton(
+            onPress: () => Navigator.pushNamed(
+              context,
+              '/cp-convert-success',
+            ),
+            text: 'Convert to vPKR',
           ),
         ],
       ),

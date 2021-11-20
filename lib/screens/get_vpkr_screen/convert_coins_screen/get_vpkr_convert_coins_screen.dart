@@ -19,9 +19,11 @@ class GetVpkrConvertCoinsScreen extends StatefulWidget {
 
 class _GetVpkrConvertCoinsScreenState extends State<GetVpkrConvertCoinsScreen> {
   String selectedCurrency = 'BTC';
+  double convertedAmount = 0;
   @override
   Widget build(BuildContext context) {
     return ExpandedBase(
+      isLowerChildScrollable: true,
       upperChild: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -84,7 +86,17 @@ class _GetVpkrConvertCoinsScreenState extends State<GetVpkrConvertCoinsScreen> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.0),
-            child: AmountFormField(),
+            child: AmountFormField(
+              onChanged: (String value) {
+                setState(
+                  () {
+                    value.isNotEmpty
+                        ? convertedAmount = double.parse(value) * 5
+                        : convertedAmount = 0; //selectedCurrency.conversionRate
+                  },
+                );
+              },
+            ),
           ),
           Text(
             'Available $selectedCurrency: ${67}',
@@ -102,50 +114,49 @@ class _GetVpkrConvertCoinsScreenState extends State<GetVpkrConvertCoinsScreen> {
             style: Styles.tNumberTextTitle,
           ),
           SizedBox(height: 18),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.baseline,
-            textBaseline: TextBaseline.alphabetic,
-            children: [
-              Text(
-                '${23000.00}',
-                style: Styles.tNumberTitle,
+          Center(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.baseline,
+                textBaseline: TextBaseline.alphabetic,
+                children: [
+                  Text(
+                    '$convertedAmount',
+                    style: Styles.tNumberTitle,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12.0),
+                    child: Text('vPKR', style: Styles.tNumberTextTitle),
+                  )
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 12.0),
-                child: Text('vPKR', style: Styles.tNumberTextTitle),
-              )
-            ],
-          ),
-          SizedBox(height: 8),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                PrimaryActionButton(
-                  onPress: () => {
-                    showModalBottomSheet(
-                      clipBehavior: Clip.none,
-                      backgroundColor: Colors.transparent,
-                      context: context,
-                      isScrollControlled: true,
-                      builder: (_) {
-                        return TransPassBottomDraggableSheet(
-                          onConfirm: () => {
-                            Navigator.pushNamed(
-                              context,
-                              '/get-vpkr-purchase-success',
-                            ),
-                          },
-                        );
-                      },
-                    ),
-                  },
-                  text: 'Continue to Payment',
-                ),
-                SizedBox(),
-              ],
             ),
+          ),
+          SizedBox(
+            height: 40,
+          ),
+          PrimaryActionButton(
+            onPress: () => {
+              showModalBottomSheet(
+                clipBehavior: Clip.none,
+                backgroundColor: Colors.transparent,
+                context: context,
+                isScrollControlled: true,
+                builder: (_) {
+                  return TransPassBottomDraggableSheet(
+                    onConfirm: () => {
+                      Navigator.pushNamed(
+                        context,
+                        '/get-vpkr-purchase-success',
+                      ),
+                    },
+                  );
+                },
+              ),
+            },
+            text: 'Continue to Payment',
           ),
         ],
       ),
