@@ -30,6 +30,29 @@ class Constants {
       balance: 0.1,
     ),
   ];
+
+  static final notifications = [
+    C2Notification(
+      inFlow: false,
+      coinName: 'vPKR',
+    ),
+    C2Notification(
+      inFlow: true,
+      coinName: 'BTC',
+    ),
+    C2Notification(
+      inFlow: false,
+      coinName: 'ETH',
+    ),
+    C2Notification(
+      inFlow: false,
+      coinName: 'vPKR',
+    ),
+    C2Notification(
+      inFlow: true,
+      coinName: 'vPKR',
+    ),
+  ];
 }
 
 class Transaction {
@@ -47,6 +70,22 @@ class Transaction {
     this.dateTimeString = '3 May, 2021 at 4:54 PM',
     required this.balance,
     this.coinName = 'BTC',
+  });
+}
+
+class C2Notification {
+  bool inFlow;
+  String transactor;
+  String dateTimeString;
+  double balance;
+  String coinName;
+
+  C2Notification({
+    required this.inFlow,
+    this.transactor = 'CPC c3 Service',
+    this.dateTimeString = '3 May, 2021 at 4:54 PM',
+    this.balance = 10.0,
+    required this.coinName,
   });
 }
 

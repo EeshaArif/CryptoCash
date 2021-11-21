@@ -12,6 +12,16 @@ class Styles {
     fontWeight: FontWeight.w400,
     color: Colors.white,
   );
+  static final TextStyle tPurpleTileDateTimeText = GoogleFonts.exo(
+    fontSize: 10,
+    fontWeight: FontWeight.w400,
+    color: Colors.white.withOpacity(0.5),
+  );
+  static final TextStyle tPurpleTileSharpText = GoogleFonts.exo(
+    fontSize: 10,
+    fontWeight: FontWeight.w400,
+    color: Colors.white,
+  );
   static final TextStyle tPurpleSheetDateTimeText = GoogleFonts.exo(
     fontSize: 14,
     fontWeight: FontWeight.w400,
