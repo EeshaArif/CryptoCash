@@ -39,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
+      initialNavIndex: currentIndex!,
       onNavBarTap: (value) {
         //if (value == 0) Navigator.pushNamed(context, '/home');
         //if (value == 1) Navigator.pushNamed(context, '/transfers');

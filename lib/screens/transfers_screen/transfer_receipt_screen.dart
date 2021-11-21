@@ -14,16 +14,16 @@ class TransferReceiptScreen extends StatelessWidget {
       isLowerChildScrollable: true,
       upperChild: TopBackButtonWithPadding(
         onPress: () => {
-          Navigator.pushNamed(
-            context,
-            '/transfers',
-          ),
+          Navigator.pushNamed(context, '/home', arguments: 1),
         },
         text: 'Receipt',
       ),
       lowerChild: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(
+            height: 40,
+          ),
           Text(
             'Transaction Successful',
             style: Styles.tPurpleSheetLargeText,

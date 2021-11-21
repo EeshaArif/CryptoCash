@@ -5,13 +5,20 @@ import 'package:flutter_svg/svg.dart';
 
 class BodyNavigationBar extends StatefulWidget {
   final void Function(int value) onTap;
-  const BodyNavigationBar({Key? key, required this.onTap}) : super(key: key);
+  final int initalIndex;
+  const BodyNavigationBar({Key? key, required this.onTap, this.initalIndex = 0})
+      : super(key: key);
   @override
   State<BodyNavigationBar> createState() => _BodyNavigationBarState();
 }
 
 class _BodyNavigationBarState extends State<BodyNavigationBar> {
-  int currentIndex = 0;
+  int? currentIndex;
+  @override
+  void initState() {
+    super.initState();
+    currentIndex = widget.initalIndex;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +26,7 @@ class _BodyNavigationBarState extends State<BodyNavigationBar> {
       showSelectedLabels: false,
       showUnselectedLabels: false,
       backgroundColor: Palette.darkPurple,
-      currentIndex: currentIndex,
+      currentIndex: currentIndex!,
       type: BottomNavigationBarType.fixed,
       onTap: (value) => {
         setState(() => {
