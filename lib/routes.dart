@@ -17,6 +17,7 @@ import 'package:cryptocash/screens/get_vpkr_screen/merchant_load_screen/get_vpkr
 import 'package:cryptocash/screens/get_vpkr_screen/get_vpkr_payment_option_screen.dart';
 import 'package:cryptocash/screens/get_vpkr_screen/convert_coins_screen/get_vpkr_purchase_success_screen.dart';
 import 'package:cryptocash/screens/home_screen/home_screen.dart';
+import 'package:cryptocash/screens/notifications_screen/opened_notification_screen.dart';
 import 'package:cryptocash/screens/reset_trans_pass_screen/reset_trans_pass_screen.dart';
 import 'package:cryptocash/screens/reset_trans_pass_screen/reset_trans_pass_verify_screen.dart';
 import 'package:cryptocash/screens/rewards_screen/convert_point_to_vpkr_screen.dart';
@@ -29,6 +30,8 @@ import 'package:cryptocash/screens/store_connected_screen/store_transaction_succ
 import 'package:cryptocash/screens/transfers_screen/transfer_receipt_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'constants.dart';
 
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -99,6 +102,13 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => HomeScreen(
             initialIndex: _initialIndex,
+          ),
+        );
+      case '/opened-notification':
+        final _notification = args as C2Notification;
+        return MaterialPageRoute(
+          builder: (context) => OpenedNotificationScreen(
+            notification: _notification,
           ),
         );
       case '/rewards':

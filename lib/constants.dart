@@ -37,14 +37,6 @@ class Constants {
       coinName: 'vPKR',
     ),
     C2Notification(
-      inFlow: true,
-      coinName: 'BTC',
-    ),
-    C2Notification(
-      inFlow: false,
-      coinName: 'ETH',
-    ),
-    C2Notification(
       inFlow: false,
       coinName: 'vPKR',
     ),

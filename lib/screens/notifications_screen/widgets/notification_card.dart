@@ -11,31 +11,38 @@ class NotificationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PurpleTileContainer(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                '${notification.coinName} ${notification.inFlow ? 'Received' : 'Sent'}',
-                style: Styles.tPurpleTileBoldText,
-              ),
-              Text(
-                notification.dateTimeString,
-                style: Styles.tPurpleTileDateTimeText,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 8,
-          ),
-          Text(
-            'You ${notification.inFlow ? 'received' : 'sent'} ${notification.balance} ${notification.coinName} ${notification.inFlow ? 'to' : 'from'} your wallet',
-            style: Styles.tPurpleTileSharpText,
-          ),
-        ],
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(
+        context,
+        '/opened-notification',
+        arguments: notification,
+      ),
+      child: PurpleTileContainer(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  '${notification.coinName} ${notification.inFlow ? 'Received' : 'Sent'}',
+                  style: Styles.tPurpleTileBoldText,
+                ),
+                Text(
+                  notification.dateTimeString,
+                  style: Styles.tPurpleTileDateTimeText,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Text(
+              'You ${notification.inFlow ? 'received' : 'sent'} ${notification.balance} ${notification.coinName} ${notification.inFlow ? 'to' : 'from'} your wallet',
+              style: Styles.tPurpleTileSharpText,
+            ),
+          ],
+        ),
       ),
     );
   }
