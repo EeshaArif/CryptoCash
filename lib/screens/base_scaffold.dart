@@ -1,16 +1,20 @@
 import 'package:cryptocash/palette.dart';
+import 'package:cryptocash/screens/common/body_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class BaseScaffold extends StatelessWidget {
   final Widget? body;
   final double? heightRatio;
-
-  const BaseScaffold({Key? key, this.body, this.heightRatio}) : super(key: key);
+  final void Function(int value)? onNavBarTap;
+  const BaseScaffold({Key? key, this.body, this.heightRatio, this.onNavBarTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final _size = MediaQuery.of(context).size;
     return Scaffold(
+      bottomNavigationBar:
+          onNavBarTap != null ? BodyNavigationBar(onTap: onNavBarTap!) : null,
       backgroundColor: Palette.darkBlue,
       body: Stack(
         children: [

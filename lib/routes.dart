@@ -26,6 +26,7 @@ import 'package:cryptocash/screens/rewards_screen/rewards_screen.dart';
 import 'package:cryptocash/screens/scan_screen/scan_screen.dart';
 import 'package:cryptocash/screens/store_connected_screen/store_connected_screen.dart';
 import 'package:cryptocash/screens/store_connected_screen/store_transaction_successful_screen.dart';
+import 'package:cryptocash/screens/transfers_screen/transfer_receipt_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -94,8 +95,11 @@ class AppRouter {
           builder: (context) => ResetTransPassScreen(),
         );
       case '/home':
+        final _initialIndex = args != null ? args as int : 0;
         return MaterialPageRoute(
-          builder: (context) => HomeScreen(),
+          builder: (context) => HomeScreen(
+            initialIndex: _initialIndex,
+          ),
         );
       case '/rewards':
         return MaterialPageRoute(
@@ -145,6 +149,12 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => StoreTransactionSuccessfulScreen(),
         );
+
+      case '/transfer-receipt':
+        return MaterialPageRoute(
+          builder: (context) => TransferReceiptScreen(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

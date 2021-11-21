@@ -1,10 +1,11 @@
-import 'package:cryptocash/extensions.dart';
 import 'package:cryptocash/palette.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class BodyNavigationBar extends StatefulWidget {
+  final void Function(int value) onTap;
+  const BodyNavigationBar({Key? key, required this.onTap}) : super(key: key);
   @override
   State<BodyNavigationBar> createState() => _BodyNavigationBarState();
 }
@@ -20,13 +21,11 @@ class _BodyNavigationBarState extends State<BodyNavigationBar> {
       backgroundColor: Palette.darkPurple,
       currentIndex: currentIndex,
       type: BottomNavigationBarType.fixed,
-      onTap: (value) {
-        // If Scan QR code pressed
-        if (value == 2) Navigator.pushNamed(context, '/scan');
-
-        setState(() {
-          currentIndex = value;
-        });
+      onTap: (value) => {
+        setState(() => {
+              currentIndex = value,
+            }),
+        widget.onTap(value)
       },
       items: [
         BottomNavigationBarItem(
@@ -85,6 +84,6 @@ class _BodyNavigationBarState extends State<BodyNavigationBar> {
           tooltip: 'Profile',
         ),
       ],
-    ).bottom();
+    );
   }
 }
