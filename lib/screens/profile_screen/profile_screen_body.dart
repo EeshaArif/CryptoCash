@@ -15,14 +15,14 @@ class ProfileScreenBody extends StatelessWidget {
           },
         ),
         Expanded(
-          child: SingleChildScrollView(
-            clipBehavior: Clip.none,
-            child: ExpandedSheet(
-              lowerChild: Column(
-                children: [],
-              ),
+          //child: SingleChildScrollView(
+          //clipBehavior: Clip.none,
+          child: ExpandedSheet(
+            lowerChild: Column(
+              children: [],
             ),
           ),
+          // ),
         ),
       ],
     );
