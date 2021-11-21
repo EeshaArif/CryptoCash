@@ -13,9 +13,16 @@ class Transactions extends StatelessWidget {
           children: [
             Text('Latest Transactions',
                 style: Theme.of(context).textTheme.headline6),
-            Text(
-              'View All',
-              style: Theme.of(context).textTheme.subtitle1,
+            TextButton(
+              onPressed: () => Navigator.pushNamed(
+                context,
+                '/home',
+                arguments: 1,
+              ),
+              child: Text(
+                'View All',
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
             )
           ],
         ).pad(
@@ -40,7 +47,7 @@ class Transactions extends StatelessWidget {
           ),
         ).pad(
           padding: EdgeInsets.symmetric(
-            vertical: 20,
+            vertical: 5,
           ),
         )
       ],
