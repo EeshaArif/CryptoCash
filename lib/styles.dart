@@ -42,6 +42,11 @@ class Styles {
     fontWeight: FontWeight.w700,
     color: Colors.white,
   );
+  static final TextStyle tPurpleSheetProfileText = GoogleFonts.exo2(
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+    color: Colors.white,
+  );
   static final TextStyle tPurpleSheetSmallBoldText = GoogleFonts.exo(
     fontSize: 15,
     fontWeight: FontWeight.w700,
