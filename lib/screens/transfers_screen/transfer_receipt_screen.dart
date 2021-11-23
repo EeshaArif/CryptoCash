@@ -8,14 +8,12 @@ import 'package:flutter/material.dart';
 
 class TransferReceiptScreen extends StatelessWidget {
   const TransferReceiptScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ExpandedBase(
       isLowerChildScrollable: true,
       upperChild: TopBackButtonWithPadding(
-        onPress: () => {
-          Navigator.pushNamed(context, '/home', arguments: 1),
-        },
         text: 'Receipt',
       ),
       lowerChild: Column(

@@ -1,12 +1,11 @@
 import 'package:cryptocash/constants.dart';
-import 'package:cryptocash/palette.dart';
+import 'package:cryptocash/screens/common/coin_dropdown.dart';
 import 'package:cryptocash/screens/common/expanded_base.dart';
 import 'package:cryptocash/screens/common/themed_buttons.dart';
 import 'package:cryptocash/screens/common/themed_fields.dart';
 import 'package:cryptocash/screens/common/trans_pass_bottom_draggable_sheet.dart';
 import 'package:cryptocash/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 List<CryptoCurrency> coins = [
   CryptoCurrency(
@@ -27,6 +26,7 @@ class StoreConnectedScreen extends StatefulWidget {
 
 class _StoreConnectedScreenState extends State<StoreConnectedScreen> {
   CryptoCurrency selectedCurrency = coins.first;
+
   @override
   Widget build(BuildContext context) {
     return ExpandedBase(
@@ -74,36 +74,14 @@ class _StoreConnectedScreenState extends State<StoreConnectedScreen> {
           SizedBox(
             height: 16,
           ),
-          DropdownButtonHideUnderline(
-            child: Container(
-              padding: EdgeInsets.only(left: 16, right: 28),
-              width: double.infinity,
-              height: 64,
-              decoration: BoxDecoration(
-                color: Palette.purpleTileContainer,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(10),
-                ),
+          CoinDropDown(
+            value: selectedCurrency,
+            onChanged: (value) => {
+              setState(
+                () => {selectedCurrency = value!},
               ),
-              child: DropdownButton<CryptoCurrency>(
-                dropdownColor: Palette.purpleTileContainer,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(10),
-                ),
-                icon: SvgPicture.asset(
-                  'assets/dropdown.svg',
-                ),
-                value: selectedCurrency,
-                onChanged: (value) => {
-                  setState(
-                    () => {selectedCurrency = value!},
-                  ),
-                },
-                items: [
-                  ...coins.map((coin) => buildCoinDropdownMenuItem(coin))
-                ],
-              ),
-            ),
+            },
+            coins: coins,
           ),
           SizedBox(
             height: 24,
@@ -145,30 +123,6 @@ class _StoreConnectedScreenState extends State<StoreConnectedScreen> {
           ),
         ],
       ),
-    );
-  }
-
-  DropdownMenuItem<CryptoCurrency> buildCoinDropdownMenuItem(
-      CryptoCurrency cryptoCurrency) {
-    return DropdownMenuItem<CryptoCurrency>(
-      child: Row(
-        children: [
-          CircleAvatar(
-            backgroundColor: Colors.transparent,
-            child: SvgPicture.asset(
-              cryptoCurrency.logoAsset,
-            ),
-          ),
-          SizedBox(
-            width: 8,
-          ),
-          Text(
-            cryptoCurrency.shortName,
-            style: Styles.tPurpleTileBoldText,
-          ),
-        ],
-      ),
-      value: cryptoCurrency,
     );
   }
 }

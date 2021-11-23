@@ -3,6 +3,10 @@ import 'package:cryptocash/palette.dart';
 import 'package:flutter/material.dart';
 
 class BalanceCard extends StatelessWidget {
+  final bool showActionButton;
+
+  const BalanceCard({Key? key, this.showActionButton = true}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final _size = MediaQuery.of(context).size;
@@ -44,30 +48,32 @@ class BalanceCard extends StatelessWidget {
               ),
             ],
           ),
-          ElevatedButton(
-            style: ButtonStyle(
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+          showActionButton
+              ? ElevatedButton(
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
+                      elevation: MaterialStateProperty.all(0)),
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/get-vpkr-payment-option'),
+                  child: Container(
+                    width: _size.width,
+                    child: Text(
+                      'Get vPKR',
+                      style: Theme.of(context).textTheme.button,
+                    ).center().pad(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 15,
+                          ),
+                        ),
                   ),
-                ),
-                elevation: MaterialStateProperty.all(0)),
-            onPressed: () =>
-                Navigator.pushNamed(context, '/get-vpkr-payment-option'),
-            child: Container(
-              width: _size.width,
-              child: Text(
-                'Get vPKR',
-                style: Theme.of(context).textTheme.button,
-              ).center().pad(
-                    padding: EdgeInsets.symmetric(
-                      vertical: 15,
-                    ),
-                  ),
-            ),
-          ).pad(
-            padding: EdgeInsets.only(top: 10),
-          )
+                ).pad(
+                  padding: EdgeInsets.only(top: 10),
+                )
+              : Container(),
         ],
       ).pad(
         padding: EdgeInsets.only(

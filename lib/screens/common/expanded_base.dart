@@ -6,10 +6,13 @@ class ExpandedBase extends StatelessWidget {
   final Widget upperChild;
   final Widget lowerChild;
   final bool isLowerChildScrollable;
+  final EdgeInsetsGeometry? lowerSheetPadding;
+
   const ExpandedBase(
       {Key? key,
       required this.upperChild,
       required this.lowerChild,
+      this.lowerSheetPadding,
       this.isLowerChildScrollable = false})
       : super(key: key);
 
@@ -23,12 +26,19 @@ class ExpandedBase extends StatelessWidget {
           isLowerChildScrollable
               ? Expanded(
                   child: SingleChildScrollView(
+                    physics: BouncingScrollPhysics(),
                     clipBehavior: Clip.none,
-                    child: ExpandedSheet(lowerChild: lowerChild),
+                    child: ExpandedSheet(
+                      lowerChild: lowerChild,
+                      padding: lowerSheetPadding,
+                    ),
                   ),
                 )
               : Expanded(
-                  child: ExpandedSheet(lowerChild: lowerChild),
+                  child: ExpandedSheet(
+                    lowerChild: lowerChild,
+                    padding: lowerSheetPadding,
+                  ),
                 ),
         ],
       ),
@@ -37,9 +47,12 @@ class ExpandedBase extends StatelessWidget {
 }
 
 class ExpandedSheet extends StatelessWidget {
+  final EdgeInsetsGeometry? padding;
+
   const ExpandedSheet({
     Key? key,
     required this.lowerChild,
+    this.padding,
   }) : super(key: key);
 
   final Widget lowerChild;
@@ -48,11 +61,12 @@ class ExpandedSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20),
+      padding:
+          padding ?? const EdgeInsets.only(left: 20.0, right: 20.0, top: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(30),
-          topRight: Radius.circular(30),
+          topLeft: Radius.circular(24),
+          topRight: Radius.circular(24),
         ),
         color: Palette.darkBlue,
       ),

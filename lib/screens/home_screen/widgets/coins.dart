@@ -12,9 +12,14 @@ class Coins extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Your Coins', style: Theme.of(context).textTheme.headline6),
-            Text(
-              'Manage your wallet',
-              style: Theme.of(context).textTheme.subtitle1,
+            RawMaterialButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/manage-wallet');
+              },
+              child: Text(
+                'Manage your wallet',
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
             )
           ],
         ).pad(
