@@ -10,13 +10,16 @@ class Wallet {
   @JsonKey(name: 'user_id')
   String userId;
 
+  String address;
+
   @JsonKey(name: 'WalletCoins')
   List<WalletCoin> walletCoins;
 
   Wallet(
       {required this.id,
       required this.userId,
-      required this.walletCoins});
+      required this.walletCoins,
+      required this.address});
 
   factory Wallet.fromJson(Map<String, dynamic> json) => _$WalletFromJson(json);
 
