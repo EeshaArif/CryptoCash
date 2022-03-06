@@ -13,11 +13,13 @@ Wallet _$WalletFromJson(Map<String, dynamic> json) {
     walletCoins: (json['WalletCoins'] as List<dynamic>)
         .map((e) => WalletCoin.fromJson(e as Map<String, dynamic>))
         .toList(),
+    address: json['address'] as String,
   );
 }
 
 Map<String, dynamic> _$WalletToJson(Wallet instance) => <String, dynamic>{
       'id': instance.id,
       'user_id': instance.userId,
+      'address': instance.address,
       'WalletCoins': instance.walletCoins.map((e) => e.toJson()).toList(),
     };

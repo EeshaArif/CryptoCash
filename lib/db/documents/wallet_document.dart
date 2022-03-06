@@ -16,6 +16,7 @@ class WalletDocument {
       }
       id
       user_id
+      address
     }
   }''';
 
@@ -36,6 +37,7 @@ class WalletDocument {
       }
       id
       user_id
+      address
     }
   }''';
 }
