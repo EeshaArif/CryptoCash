@@ -12,6 +12,7 @@ WalletCoin _$WalletCoinFromJson(Map<String, dynamic> json) {
     walletId: json['wallet_id'] as String,
     coinId: json['coin_id'] as String,
     balance: (json['balance'] as num).toDouble(),
+    coin: Coin.fromJson(json['Coin'] as Map<String, dynamic>),
   );
 }
 
@@ -21,4 +22,5 @@ Map<String, dynamic> _$WalletCoinToJson(WalletCoin instance) =>
       'wallet_id': instance.walletId,
       'coin_id': instance.coinId,
       'balance': instance.balance,
+      'Coin': instance.coin.toJson(),
     };

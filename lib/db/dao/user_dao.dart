@@ -23,4 +23,18 @@ class UserDao {
       ),
     ).future!;
   }
+
+  // Auth protected
+  Future<NetworkResponse<User>> retrieveUser() {
+    final response = _client.query(QueryOptions(
+      document: gql(UserDocument.retrieveUser),
+    ));
+
+    return Transformer<User>(
+      future: response,
+      fromJson: (json) => User.fromJson(
+        json['cryptocash_User'][0] as Map<String, dynamic>,
+      ),
+    ).future!;
+  }
 }

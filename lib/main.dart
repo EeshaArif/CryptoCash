@@ -1,10 +1,9 @@
-// @dart=2.9
 import 'package:cryptocash/palette.dart';
 import 'package:cryptocash/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() {
+void main() async {
   runApp(App());
 }
 

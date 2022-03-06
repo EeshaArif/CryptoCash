@@ -11,7 +11,7 @@ class Coin {
   String name;
 
   @JsonKey(name: 'exchange_to_vpkr')
-  String exchangeTovPKR;
+  double exchangeTovPKR;
 
   Coin(
       {required this.id,

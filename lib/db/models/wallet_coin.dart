@@ -1,8 +1,9 @@
+import 'package:cryptocash/db/models/coin.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'wallet_coin.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class WalletCoin {
   String id;
 
@@ -14,11 +15,15 @@ class WalletCoin {
 
   double balance;
 
+  @JsonKey(name: 'Coin')
+  Coin coin;
+
   WalletCoin(
       {required this.id,
       required this.walletId,
       required this.coinId,
-      required this.balance});
+      required this.balance,
+      required this.coin});
 
   factory WalletCoin.fromJson(Map<String, dynamic> json) =>
       _$WalletCoinFromJson(json);

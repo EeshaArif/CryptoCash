@@ -5,4 +5,14 @@ class UserDocument {
         affected_rows
       }
     }''';
+
+  static final retrieveUser = r'''
+  query RetrieveUser {
+    cryptocash_User {
+      phone_number
+      name
+      id
+      email
+    }
+  }''';
 }

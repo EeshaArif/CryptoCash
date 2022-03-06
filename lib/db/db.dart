@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:cryptocash/db/dao/auth_dao.dart';
 import 'package:cryptocash/db/dao/user_dao.dart';
+import 'package:cryptocash/db/dao/wallet_dao.dart';
 import 'package:graphql/client.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -16,13 +17,12 @@ export 'package:cryptocash/db/models/wallet_coin.dart';
 class DB {
   late UserDao userDao;
   late AuthDao authDao;
+  late WalletDao walletDao;
 
   late GraphQLClient _client;
 
   late String _graphQLHttpEndpoint;
   late String _graphQLWsEndpoint;
-
-  HiveStore? _cache;
 
   BehaviorSubject<bool> _isAuthenticatedStreamController =
       BehaviorSubject.seeded(false);
@@ -82,12 +82,8 @@ class DB {
       _httpLink,
     );
 
-    if (cacheId != null) _cache = await HiveStore.open(boxName: cacheId);
-
-    _cache = _cache ?? await HiveStore.open();
-
     _client = GraphQLClient(
-      cache: GraphQLCache(store: _cache),
+      cache: GraphQLCache(store: InMemoryStore()),
       link: _link,
     );
   }
@@ -95,6 +91,7 @@ class DB {
   void _initializeDao() {
     authDao = AuthDao(_client);
     userDao = UserDao(_client);
+    walletDao = WalletDao(_client);
   }
 
   Future<void> authenticate({required String token}) async {

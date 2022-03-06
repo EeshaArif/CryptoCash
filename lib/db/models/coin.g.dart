@@ -11,7 +11,7 @@ Coin _$CoinFromJson(Map<String, dynamic> json) {
     id: json['id'] as String,
     shortName: json['short_name'] as String,
     name: json['name'] as String,
-    exchangeTovPKR: json['exchange_to_vpkr'] as String,
+    exchangeTovPKR: (json['exchange_to_vpkr'] as num).toDouble(),
   );
 }
 
