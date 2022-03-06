@@ -20,8 +20,8 @@ String generateRandomString(int len) {
 void main() {
   group('DB Package', () {
     final db = DB(
-      endpoint: 'localhost:8080/v1/graphql',
-      secured: false,
+      endpoint: 'graphql.c2business.ml/v1/graphql',
+      secured: true,
       cacheId: 'test',
     );
 
